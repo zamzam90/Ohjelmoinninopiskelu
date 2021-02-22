@@ -35,7 +35,7 @@ function onkoSamatLuvut(ekaLuku, tokaLuku) {
     } else {
         return console.log("Eri luvut");
     }
-} 
+}
 
 //5. muunna tunnit,minuutit,sekunnit sekunneiksi
 function sekunneiksi(tunnit,minuutit,sekunnit) {
