@@ -4,7 +4,7 @@
 /*global document*//* eslint no-document: "off" */
 /*global window*//* eslint no-window: "off" */
 /*global undef*//* eslint no-undef: "off" */
-/*global unused-var*//* eslint no-unused-vars: "off" */
+/* eslint no-unused-vars: "off" */
 
 //1. Yhteenlasku
 function laskeYhteen(ekaLuku,tokaLuku) {
