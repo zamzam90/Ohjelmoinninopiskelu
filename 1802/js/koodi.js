@@ -46,3 +46,41 @@ function sekunneiksi(tunnit,minuutit,sekunnit) {
 }
 
 //6. lasketaan kunka monta päivää vanha olet
+function yourAge(day, month, year) {
+  function yearsToDays(year) { //muutetaan annettu vuosi päiviksi
+    return year * 365.25;
+  }
+  function monthToDays(month) { //muutetaan annettu kuukausi päiviksi
+    switch(month-1) { //jos tammikuu lisätään 0päivää jne..
+      case 0:
+      return 0;
+      case 1:
+      return 31;
+      case 2:
+      return 59;
+      case 3:
+      return 90;
+      case 4:
+      return 120;
+      case 5:
+      return 151;
+      case 6:
+      return 181;
+      case 7:
+      return 212;
+      case 8:
+      return 243;
+      case 9:
+      return 273;
+      case 10:
+      return 304;
+      case 11:
+      return 334;
+      default:
+      return 0;
+    }
+  }
+    dob = yearsToDays(year) + monthToDays(month) + day; //annettu syntymäpäivä vuosiksi
+    today = yearsToDays(2020) + monthToDays(3) + 3; //kuluva pvm päiviksi
+    console.log(today-dob); //tämäpäivä - syntymäpäivä
+}
