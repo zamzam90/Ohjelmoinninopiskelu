@@ -51,7 +51,7 @@ function yourAge(day, month, year) {
     return year * 365.25;
   }
   function monthToDays(month) { //muutetaan annettu kuukausi päiviksi
-    switch(month-1) { //jos tammikuu lisätään 0päivää jne..
+    switch(month-1) { //jos tammikuu lisätään 0päivää, jos joulukuu lisätään 334päivää jne..
       case 0:
       return 0;
       case 1:
@@ -80,7 +80,7 @@ function yourAge(day, month, year) {
       return 0;
     }
   }
-    dob = yearsToDays(year) + monthToDays(month) + day; //annettu syntymäpäivä vuosiksi
+    dob = yearsToDays(year) + monthToDays(month) + day; //annettu syntymäpäivä päiviksi
     today = yearsToDays(2020) + monthToDays(3) + 3; //kuluva pvm päiviksi
     console.log(today-dob); //tämäpäivä - syntymäpäivä
 }
