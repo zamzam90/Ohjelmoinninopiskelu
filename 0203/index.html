@@ -12,15 +12,15 @@
 <body>
 
     <p>Check console, press <kbd>F12</kbd>.</p>
-    <p><button onclick="tehtava1([8, 4, 9, 6, 2])">Tehtävä 1</button></p>
-    <p><button onclick="tehtava2(146)">Tehtävä 2</button></p>
-    <p><button onclick="tehtava3(8)">Tehtävä 3</button></p>
-    <p><button onclick="console.log(sami.email)">Tehtävä 4</button></p>
-    <p><button onclick="tehtava5('webmaster')">Tehtävä 5</button></p>
-    <p><button onclick="">Tehtävä 6</button></p>
+    <p><button onclick="return tehtava1([8, 4, 9, 6, 2]);">Tehtävä 1</button></p>
+    <p><button onclick="return tehtava2(146);">Tehtävä 2</button></p>
+    <p><button onclick="return tehtava3(8);">Tehtävä 3</button></p>
+    <p><button onclick="return console.log('Tehtävä 4:\n' + sami.email);">Tehtävä 4</button></p>
+    <p><button onclick="return tehtava5('webmaster');">Tehtävä 5</button></p>
+    <p><button onclick="return oppilaidenArvosanat();">Tehtävä 6</button></p>
     <p> </p>
-    <p><button onclick="console.clear()">Clear console</button></p>
-    <p><button onclick="window.location.reload(false)">Refresh page</button></p>
+    <p><button onclick="return console.clear();">Clear console</button></p>
+    <p><button onclick="return window.location.reload(false);">Refresh page</button></p>
 
 </body>
 
