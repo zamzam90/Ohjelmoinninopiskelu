@@ -87,13 +87,13 @@ var maija = new tehtava4("Maija", "Meikäläinen", "hakunila", "01360", "vantaa"
 //5.Tehtävä, tulostetaan annetun sanan kirjaimet aakkosjärjestyksessä..
 //kesken...
 function tehtava5(annettuSana) {
-      sanaListaksi = Array.from(annettuSana);
-      sortWord = sanaListaksi.sort();
+      wordToArray = Array.from(annettuSana);
+      sortWord = wordToArray.sort();
       sortedWord = sortWord.join("").toString();
       console.log(sortedWord);
 }
 
 //6.Tehtävä, arvostellaan kokeita..
-function tehtava5() {
+function tehtava6() {
   
 }
