@@ -88,6 +88,12 @@ var maija = new tehtava4("Maija", "Meikäläinen", "hakunila", "01360", "vantaa"
 //kesken...
 function tehtava5(annettuSana) {
       sanaListaksi = Array.from(annettuSana);
-      sanaListaksi.sort();
-      console.log(sanaListaksi);
+      sortWord = sanaListaksi.sort();
+      sortedWord = sortWord.join("").toString();
+      console.log(sortedWord);
+}
+
+//6.Tehtävä, arvostellaan kokeita..
+function tehtava5() {
+  
 }
