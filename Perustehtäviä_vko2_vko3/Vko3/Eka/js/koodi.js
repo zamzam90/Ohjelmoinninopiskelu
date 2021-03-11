@@ -6,4 +6,4 @@
 /*global undef*//* eslint no-undef: "off" */
 /* eslint no-unused-vars: "off" */
 
-// 1.Tehtävä, armstrongin numerojuttu, joo ei,,,, :D:D:D
+//Vko 3 perustehtäviä, ekat.

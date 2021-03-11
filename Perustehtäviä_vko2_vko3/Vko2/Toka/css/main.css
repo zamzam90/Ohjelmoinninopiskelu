@@ -1,0 +1,25 @@
+html,
+body {
+    /* IE 10-11 didn't like using min-height */
+    height: 100%;
+}
+
+body {
+    color: darkgrey;
+    background-color: #161616;
+    margin: 2px;
+    font: 16px Sans-Serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+  margin: 15px;
+}
+
+button {
+    color: green;
+    background-color: #464646;
+}
