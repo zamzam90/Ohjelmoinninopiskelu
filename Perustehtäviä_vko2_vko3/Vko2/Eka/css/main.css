@@ -20,6 +20,7 @@ section {
   margin-right: auto;
   width: 75%;
   padding: 10px;
+  border-radius: 5px;
   background-color: #262626;
 }
 
@@ -31,7 +32,11 @@ section {
   color: green;
   text-align: left;
 }
-
+.vastausss {
+  padding: 5px;
+  border: 2px solid red;
+  width: 300px;
+}
 button {
   color: green;
   background-color: #464646;
