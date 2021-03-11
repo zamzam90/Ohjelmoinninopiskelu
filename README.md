@@ -1,2 +1,2 @@
 # Ohjelmoinninopiskelu
-Täällä koodaushaaste tiedostot, ja ehkä jotain muitakin juttuja
+Täällä tehtävien tiedostot, koodaushaasteiden tiedostot, ja ehkä jotain muitakin juttuja.
