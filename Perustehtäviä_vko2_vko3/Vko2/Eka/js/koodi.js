@@ -1,9 +1,14 @@
 //filter some linter errors...
-/*global console*//* eslint no-console: "off" */
-/*global prompt*//* eslint no-prompt: "off" */
-/*global document*//* eslint no-document: "off" */
-/*global window*//* eslint no-window: "off" */
-/*global undef*//* eslint no-undef: "off" */
+/*global console*/
+/* eslint no-console: "off" */
+/*global prompt*/
+/* eslint no-prompt: "off" */
+/*global document*/
+/* eslint no-document: "off" */
+/*global window*/
+/* eslint no-window: "off" */
+/*global undef*/
+/* eslint no-undef: "off" */
 /* eslint no-unused-vars: "off" */
 console.log("Viikon2 ekat perustehtävät.");
 //Vko 2 perustehtäviä, ekat.
@@ -23,6 +28,7 @@ function sortEm() {
   selkee = numerot.join(" ").toLocaleString();
   //anna vastais alerttina?
   alert("Annoit numerot: " + uno + "," + dos + "," + tres + "\n" + "Pienimmästä suurimpaan: " + selkee);
+  //kirjoitetaan vastaus myös htmlään..
 }
 //2.Assignment, ask for 5 numbers, find the biggest..
 //get numbers from html..
@@ -34,13 +40,14 @@ function biggest() {
   cuatro = document.getElementById('fourth_number').value;
   cinco = document.getElementById('fifth_number').value;
   //put them in an array and sort it (w3schools helped with sort..)
+  numberss = [uno, dos, tres, cuatro, cinco];
   numbers = [uno, dos, tres, cuatro, cinco];
   sortedNumbers = numbers.sort(function(a, b) {
     return b - a;
   });
   //get the last number in the array a.k.a the biggest
   theBiggest = sortedNumbers[0];
-  alert(theBiggest);
+  alert("Annoit numerot: " + numberss + "\n" + "Suurin on: " +theBiggest);
 }
 //3. Mission, is the number even or odd?
 function evnORodd() {
@@ -59,15 +66,16 @@ function reteli() {
   age = document.getElementById('ika').value;
   //jos <16 fillari, jos <18 mopo, muuten auto.
   if (age < 16) {
-    alert("Olet "+age+" vuotta vanha, saat ajaa polkupyörää.");
+    alert("Olet " + age + " vuotta vanha, saat ajaa polkupyörää.");
   } else if (age < 18) {
-    alert("Olet "+age+" vuotta vanha, saat ajaa mopolla.");
+    alert("Olet " + age + " vuotta vanha, saat ajaa mopolla.");
   } else
-    alert("Olet "+age+" vuotta vanha, saat ajaa autolla.");
+    alert("Olet " + age + " vuotta vanha, saat ajaa autolla.");
 }
 //5. Tehtävä, näytetään "hei maailma" valitulla kielellä..
 function heippaMaailma() {
-  
-  alert("Kesken..");
+  //haetaan käyttäjän valinta htmlstä..
+  x = document.getElementById('select_lang').value;
+  alert(x);
 }
 console.log("Programmed by Sami.S KKTI20C - 2021");
