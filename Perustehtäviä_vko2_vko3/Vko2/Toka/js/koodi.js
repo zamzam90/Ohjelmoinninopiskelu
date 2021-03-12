@@ -14,11 +14,13 @@ function ehto2lauseita1() {
   //tarkistetaan inko luku positiivinen vai negatiivinen
   //ilmoitetaan alertilla kumpi luku on..
   if (nmbr < 0) {
-    alert("negatiivinen");
+    alert("Luku on negatiivinen");
+    console.log("luku on negatiivinen");
     //kirjoitetaan vastaus vielä htmlään myös..
     document.getElementById('vastaus1').innerHTML = "Antamasi luku: " +  nmbr + ", on negatiivinen.";
   } else {
-    alert("positiivinen");
+    alert("Luku on positiivinen");
+    console.log("luku on positiivinen");
     //kirjoitetaan vastaus vielä htmlään myös..
     document.getElementById('vastaus1').innerHTML = "Antamasi luku: " +  nmbr + ", on positiivinen.";
   }
