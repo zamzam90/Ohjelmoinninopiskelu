@@ -9,8 +9,8 @@ body {
   box-sizing: border-box;
 }
 
-p {
-  text-align: center;
+header {
+  font-family: fantasy;
 }
 
 section {
@@ -24,6 +24,22 @@ section {
   background-color: #262626;
 }
 
+p {
+  text-align: center;
+}
+
+button {
+  color: green;
+  background-color: #464646;
+  padding: 5px;
+}
+
+footer {
+  font-family: monospace;
+  margin: 5px 0 5px 0;
+  text-align: center;
+}
+
 .tehtava h1 {
   text-decoration: underline;
 }
@@ -32,18 +48,9 @@ section {
   color: green;
   text-align: left;
 }
+
 .vastausss {
   padding: 5px;
-  border: 2px solid red;
+  border: 1px solid red;
   width: 300px;
-}
-button {
-  color: green;
-  background-color: #464646;
-  padding: 5px;
-}
-
-footer {
-  margin: 5px 0 5px 0;
-  text-align: center;
 }

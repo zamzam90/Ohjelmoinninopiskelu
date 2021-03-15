@@ -11,8 +11,8 @@ console.log("Tässä tokan viikon tokat tehtävät..");
 function ehto2lauseita1() {
   //haetaan käyttäjän antama luku htmlstä
   nmbr = document.getElementById('joqLuku').value;
-  //tarkistetaan inko luku positiivinen vai negatiivinen
-  //ilmoitetaan alertilla kumpi luku on..
+  //tarkistetaan onko luku positiivinen vai negatiivinen
+  //ilmoitetaan alertilla vastaus..
   if (nmbr < 0) {
     alert("Luku on negatiivinen");
     console.log("luku on negatiivinen");

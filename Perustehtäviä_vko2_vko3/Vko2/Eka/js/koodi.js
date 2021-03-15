@@ -107,7 +107,7 @@ function empty()
   document.getElementById("fifth_number").value = "";
   document.getElementById("luku").value = "";
   document.getElementById("ika").value = "";
-  document.getElementById("select_lang").value = "select_lang";
+  document.getElementById("select_lang").value = "Hello world!";
   document.getElementById("vastaus1").innerHTML = "Vastaus..";
   document.getElementById("vastaus2").innerHTML = "Vastaus..";
   document.getElementById("vastaus3").innerHTML = "Vastaus..";
