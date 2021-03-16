@@ -15,17 +15,17 @@ console.log("Viikon2 ekat perustehtävät.");
 //1.Tehtävä, pyydetään 3 numeroa ja laitetaan ne järjestykseen..
 function sortEm() {
   //hae numerot htmlstä
-  uno = document.getElementById('first').value;
-  dos = document.getElementById('second').value;
-  tres = document.getElementById('third').value;
+  var uno = document.getElementById('first').value;
+  var dos = document.getElementById('second').value;
+  var tres = document.getElementById('third').value;
   //lisää numerot taulukkoon
-  numerot = [uno, dos, tres];
+  var numerot = [uno, dos, tres];
   //järkkää taulukkoon
   numerot.sort(function(a, b) {
     return a - b;
   });
   //siivotaan pilkut pois..
-  selkee = numerot.join(" ").toLocaleString();
+  var selkee = numerot.join(" ").toLocaleString();
   //anna vastais alerttina?
   alert("Annoit numerot: " + uno + "," + dos + "," + tres + "\n" + "Pienimmästä suurimpaan: " + selkee);
   //kirjoitetaan vastaus myös htmlään..
@@ -35,19 +35,19 @@ function sortEm() {
 //get numbers from html..
 function biggest() {
   //get numbers from html form..
-  uno = document.getElementById('first_number').value;
-  dos = document.getElementById('second_number').value;
-  tres = document.getElementById('third_number').value;
-  cuatro = document.getElementById('fourth_number').value;
-  cinco = document.getElementById('fifth_number').value;
+  var uno = document.getElementById('first_number').value;
+  var dos = document.getElementById('second_number').value;
+  var tres = document.getElementById('third_number').value;
+  var cuatro = document.getElementById('fourth_number').value;
+  var cinco = document.getElementById('fifth_number').value;
   //put them in an array and sort it (w3schools helped with sort..)
-  numberss = [uno, dos, tres, cuatro, cinco];
-  numbers = [uno, dos, tres, cuatro, cinco];
-  sortedNumbers = numbers.sort(function(a, b) {
+  var numberss = [uno, dos, tres, cuatro, cinco];
+  var numbers = [uno, dos, tres, cuatro, cinco];
+  var sortedNumbers = numbers.sort(function(a, b) {
     return b - a;
   });
   //get the last number in the array a.k.a the biggest
-  theBiggest = sortedNumbers[0];
+  var theBiggest = sortedNumbers[0];
   alert("Annoit numerot: " + numberss + "\n" + "Suurin on: " +theBiggest);
   //kirjoitetaan vastaus myös htmlään..
   document.getElementById("vastaus2").innerHTML = "Annoit numerot: " + numberss + "\n" + "Suurin on: " +theBiggest;
@@ -55,7 +55,7 @@ function biggest() {
 //3. Mission, is the number even or odd?
 function evnORodd() {
   //hajetaan luku htmlstä..
-  luku = document.getElementById('luku').value;
+  var luku = document.getElementById('luku').value;
   //if parillinen do this, else do that..
   if (luku % 2 === 0) {
     alert("Annoit luvun " + luku + ", se on parillinen.");
@@ -70,7 +70,7 @@ function evnORodd() {
 //4.Tehtävä, annetaan ajoneuvo iän mukaan..
 function reteli() {
   //haetaan ikä htmlstä..
-  age = document.getElementById('ika').value;
+  var age = document.getElementById('ika').value;
   //jos <16 fillari, jos <18 mopo, muuten auto.
   if (age < 16) {
     alert("Olet " + age + " vuotta vanha, saat ajaa polkupyörää.");
@@ -88,7 +88,7 @@ function reteli() {
 //5. Tehtävä, näytetään "hei maailma" valitulla kielellä..
 function heippaMaailma() {
   //haetaan käyttäjän valinta htmlstä..
-  x = document.getElementById('select_lang').value;
+  var x = document.getElementById('select_lang').value;
   alert(x);
   //kirjoitetaan vastaus myös htmlään..
   document.getElementById("vastaus5").innerHTML = x;
