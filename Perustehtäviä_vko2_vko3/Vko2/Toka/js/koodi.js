@@ -66,19 +66,19 @@ function karkausVuosiko() {
   var vuosiluku;
   vuosiluku = parseInt(document.getElementById("vuosiLuku").value);
   if (vuosiluku % 4 == 0 && vuosiluku % 100 !== 0) {
-    karkaus = " on karkausvuosi.";
+    karkaus = "On karkausvuosi.";
     //console.log("vuosi on jaollinen neljällä sekä ei sadalla=karkausvuosi.");
     alert("Vuosi on karkausvuosi");
   } else if (vuosiluku % 400 == 0) {
-    karkaus = " on karkausvuosi.";
+    karkaus = "On karkausvuosi.";
     //console.log("Vuosi on jaollinen neljälläsadalla=karkausvuosi.");
     alert("Vuosi on karkausvuosi");
   } else {
-    karkaus = " ei ole karkausvuosi.";
+    karkaus = "Ei ole karkausvuosi.";
     //console.log("vuosi ei ole karkausvuosi.");
     alert("Vuosi ei ole karkausvuosi");
   }
-  document.getElementById("vastaus3").innerHTML = "Antamasi vuosi: " + vuosiluku + ", " + karkaus + ".";
+  document.getElementById("vastaus3").innerHTML = "Antamasi vuosi: " + vuosiluku + ".\<br>" + karkaus + ".";
 }
 //4.Tehtävä
 //kysytään käyttäjältä 5 lukua, lasketaan niiden summa ja keskiarvo.
@@ -98,7 +98,7 @@ function summaJaKA() {
   keskiarvo = summa / 5;
   //tulostetaan summa ja keskiarvo
   alert("Lukujen summa on: " + summa + " ja keskiarvo on: " + keskiarvo + ".");
-  document.getElementById("vastaus4").innerHTML = "Lukujen summa on: " + summa + " ja keskiarvo on: " + keskiarvo;
+  document.getElementById("vastaus4").innerHTML = "Lukujen summa on: " + summa + ".\<br>Keskiarvo on: " + keskiarvo + ".";
 }
 //5.Tehtävä
 //joQ lausemuuttuja
