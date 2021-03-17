@@ -24,7 +24,7 @@ function sortEm() {
   //anna vastais alerttina?
   alert("Annoit numerot: " + uno + "," + dos + "," + tres + "\n" + "Pienimmästä suurimpaan: " + selkee);
   //kirjoitetaan vastaus myös htmlään..
-  document.getElementById("vastaus1").innerHTML = "Annoit numerot: " + uno + "," + dos + "," + tres + "\n" + "Pienimmästä suurimpaan: " + selkee;
+  document.getElementById("vastaus1").innerHTML = "Annoit numerot: " + uno + "," + dos + "," + tres + "\<br>" + "Pienimmästä suurimpaan: " + selkee;
 }
 //2.Assignment, ask for 5 numbers, find the biggest..
 //get numbers from html..
@@ -45,7 +45,7 @@ function biggest() {
   var theBiggest = sortedNumbers[0];
   alert("Annoit numerot: " + numberss + "\n" + "Suurin on: " + theBiggest);
   //kirjoitetaan vastaus myös htmlään..
-  document.getElementById("vastaus2").innerHTML = "Annoit numerot: " + numberss + "\n" + "Suurin on: " + theBiggest;
+  document.getElementById("vastaus2").innerHTML = "Annoit numerot: " + numberss + "\<br>" + "Suurin on: " + theBiggest;
 }
 //3. Mission, is the number even or odd?
 function evnORodd() {
