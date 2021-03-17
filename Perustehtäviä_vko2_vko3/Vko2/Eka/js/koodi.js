@@ -1,23 +1,18 @@
 //filter some linter errors...
-/*global console*/
-/* eslint no-console: "off" */
-/*global prompt*/
-/* eslint no-prompt: "off" */
-/*global document*/
-/* eslint no-document: "off" */
-/*global window*/
-/* eslint no-window: "off" */
-/*global undef*/
-/* eslint no-undef: "off" */
+/*global console*//* eslint no-console: "off" */
+/*global prompt*//* eslint no-prompt: "off" */
+/*global document*//* eslint no-document: "off" */
+/*global window*//* eslint no-window: "off" */
+/*global undef*//* eslint no-undef: "off" */
 /* eslint no-unused-vars: "off" */
 console.log("Viikon2 ekat perustehtävät.");
 //Vko 2 perustehtäviä, ekat.
 //1.Tehtävä, pyydetään 3 numeroa ja laitetaan ne järjestykseen..
 function sortEm() {
   //hae numerot htmlstä
-  var uno = document.getElementById('first').value;
-  var dos = document.getElementById('second').value;
-  var tres = document.getElementById('third').value;
+  var uno = document.getElementById("first").value;
+  var dos = document.getElementById("second").value;
+  var tres = document.getElementById("third").value;
   //lisää numerot taulukkoon
   var numerot = [uno, dos, tres];
   //järkkää taulukkoon
@@ -35,11 +30,11 @@ function sortEm() {
 //get numbers from html..
 function biggest() {
   //get numbers from html form..
-  var uno = document.getElementById('first_number').value;
-  var dos = document.getElementById('second_number').value;
-  var tres = document.getElementById('third_number').value;
-  var cuatro = document.getElementById('fourth_number').value;
-  var cinco = document.getElementById('fifth_number').value;
+  var uno = document.getElementById("first_number").value;
+  var dos = document.getElementById("second_number").value;
+  var tres = document.getElementById("third_number").value;
+  var cuatro = document.getElementById("fourth_number").value;
+  var cinco = document.getElementById("fifth_number").value;
   //put them in an array and sort it (w3schools helped with sort..)
   var numberss = [uno, dos, tres, cuatro, cinco];
   var numbers = [uno, dos, tres, cuatro, cinco];
@@ -48,14 +43,14 @@ function biggest() {
   });
   //get the last number in the array a.k.a the biggest
   var theBiggest = sortedNumbers[0];
-  alert("Annoit numerot: " + numberss + "\n" + "Suurin on: " +theBiggest);
+  alert("Annoit numerot: " + numberss + "\n" + "Suurin on: " + theBiggest);
   //kirjoitetaan vastaus myös htmlään..
-  document.getElementById("vastaus2").innerHTML = "Annoit numerot: " + numberss + "\n" + "Suurin on: " +theBiggest;
+  document.getElementById("vastaus2").innerHTML = "Annoit numerot: " + numberss + "\n" + "Suurin on: " + theBiggest;
 }
 //3. Mission, is the number even or odd?
 function evnORodd() {
   //hajetaan luku htmlstä..
-  var luku = document.getElementById('luku').value;
+  var luku = document.getElementById("luku").value;
   //if parillinen do this, else do that..
   if (luku % 2 === 0) {
     alert("Annoit luvun " + luku + ", se on parillinen.");
@@ -70,7 +65,7 @@ function evnORodd() {
 //4.Tehtävä, annetaan ajoneuvo iän mukaan..
 function reteli() {
   //haetaan ikä htmlstä..
-  var age = document.getElementById('ika').value;
+  var age = document.getElementById("ika").value;
   //jos <16 fillari, jos <18 mopo, muuten auto.
   if (age < 16) {
     alert("Olet " + age + " vuotta vanha, saat ajaa polkupyörää.");
@@ -82,20 +77,19 @@ function reteli() {
     document.getElementById("vastaus4").innerHTML = "Olet " + age + " vuotta vanha, saat ajaa mopolla";
   } else
     alert("Olet " + age + " vuotta vanha, saat ajaa autolla.");
-    //kirjoitetaan vastaus myös htmlään..
-    document.getElementById("vastaus4").innerHTML = "Olet " + age + " vuotta vanha, saat ajaa autolla.";
+  //kirjoitetaan vastaus myös htmlään..
+  document.getElementById("vastaus4").innerHTML = "Olet " + age + " vuotta vanha, saat ajaa autolla.";
 }
 //5. Tehtävä, näytetään "hei maailma" valitulla kielellä..
 function heippaMaailma() {
   //haetaan käyttäjän valinta htmlstä..
-  var x = document.getElementById('select_lang').value;
+  var x = document.getElementById("select_lang").value;
   alert(x);
   //kirjoitetaan vastaus myös htmlään..
   document.getElementById("vastaus5").innerHTML = x;
 }
 //reset answer paragraphs..
-function empty()
-{
+function empty() {
   //tyhjätään KAIKKI..
   document.getElementById("first").value = "";
   document.getElementById("second").value = "";

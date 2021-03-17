@@ -18,10 +18,10 @@ function tehtava1(arr) {
 
 //2.Tehtävä, onko luku pariton vai parillinen
 function tehtava2(luku) {
-  if (luku%2 == 0) {
+  if (luku % 2 == 0) {
     console.log("Tehtävä 2:");
     console.log("parillinen");
-  }else {
+  } else {
     console.log("Tehtävä 2:");
     console.log("pariton");
   }
@@ -87,13 +87,13 @@ function tehtava3(kuukausi) {
 
 //4.Tehtävä, syötellän osoitetietoja yms..
 function tehtava4(firstName, lastName, address, zipcode, city, phone, email) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.address = address;
-      this.zipcode = zipcode;
-      this.city = city;
-      this.phone = phone;
-      this.email = email;
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.address = address;
+  this.zipcode = zipcode;
+  this.city = city;
+  this.phone = phone;
+  this.email = email;
 }
 
 var sami = new tehtava4("Sami", "Siltanen", "kolopolku", '01260', "vantaa", '0401234567', "sami.siltanen@edu.keuda.fi");
@@ -103,11 +103,11 @@ var maija = new tehtava4("Maija", "Meikäläinen", "hakunila", "01360", "vantaa"
 //5.Tehtävä, tulostetaan annetun sanan kirjaimet aakkosjärjestyksessä..
 //kesken...
 function tehtava5(annettuSana) {
-      wordToArray = Array.from(annettuSana);
-      sortWord = wordToArray.sort();
-      sortedWord = sortWord.join("").toString();
-      console.log("Tehtävä 5:");
-      console.log(sortedWord);
+  wordToArray = Array.from(annettuSana);
+  sortWord = wordToArray.sort();
+  sortedWord = sortWord.join("").toString();
+  console.log("Tehtävä 5:");
+  console.log(sortedWord);
 }
 
 //6.Tehtävä, arvostellaan kokeita..
@@ -127,7 +127,8 @@ function tehtava6(name, points) {
     console.log(nimi + " K5");
   }
 }
+
 function oppilaidenArvosanat() {
   console.log("tehtävä 6:");
-  console.log(tehtava6('Daniel', 80), tehtava6('Viivi', 77), tehtava6('Tiina', 88), tehtava6('Ismael', 95), tehtava6('Tuomas', 68));
+  return tehtava6("Daniel", 80), tehtava6("Viivi", 77), tehtava6("Tiina", 88), tehtava6("Ismael", 95), tehtava6("Tuomas", 68);
 }

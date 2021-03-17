@@ -8,6 +8,6 @@
 
 //funktio joka tekee ponnahdusikkunan jossa teksti "heippa maailma"
 function tervehdys() {
-    alert("Heippa");
-    alert("Maailma!");
+  alert("Heippa");
+  alert("Maailma!");
 }
