@@ -18,7 +18,7 @@ section {
   margin-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 50%;
   padding: 10px;
   border-radius: 5px;
   background-color: #262626;
@@ -52,5 +52,5 @@ footer {
 .vastausss {
   padding: 5px;
   border: 1px solid red;
-  width: 300px;
+  width: 50%;
 }

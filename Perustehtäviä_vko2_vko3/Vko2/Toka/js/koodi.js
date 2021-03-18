@@ -15,12 +15,12 @@ function ehto2lauseita1() {
   //tarkistetaan onko luku positiivinen vai negatiivinen
   //ilmoitetaan alertilla vastaus..
   if (nmbr < 0) { //jos luku alle 0
-    alert("Luku on negatiivinen");
+    //alert("Luku on negatiivinen");
     //console.log("luku on negatiivinen");
     //kirjoitetaan vastaus vielä htmlään myös..
     document.getElementById('vastaus1').innerHTML = "Antamasi luku: " + nmbr + ", on negatiivinen.";
   } else { //jos luku yli 0
-    alert("Luku on positiivinen");
+    //alert("Luku on positiivinen");
     //console.log("luku on positiivinen");
     //kirjoitetaan vastaus vielä htmlään myös..
     document.getElementById("vastaus1").innerHTML = "Antamasi luku: " + nmbr + ", on positiivinen.";
@@ -34,29 +34,39 @@ function viikonPäiväNro() {
   var päiväOn = "joQpäivä";
   switch (päiväNro) {
     case 1: //jos 1, Maanantai jne..
-      päiväOn = "Maanantai";
+      päiväOn = "on maanantai";
+      document.getElementById("vastaus2").innerHTML = "Antamasi numero:" + päiväNro + "," + päiväOn + ".";
       break;
     case 2:
-      päiväOn = "Tiistai";
+      päiväOn = "on tiistai";
+      document.getElementById("vastaus2").innerHTML = "Antamasi numero:" + päiväNro + "," + päiväOn + ".";
       break;
     case 3:
-      päiväOn = "Keskiviikko";
+      päiväOn = "on keskiviikko";
+      document.getElementById("vastaus2").innerHTML = "Antamasi numero:" + päiväNro + "," + päiväOn + ".";
       break;
     case 4:
-      päiväOn = "Torstai";
+      päiväOn = "on torstai";
+      document.getElementById("vastaus2").innerHTML = "Antamasi numero:" + päiväNro + "," + päiväOn + ".";
       break;
     case 5:
-      päiväOn = "Perjantai";
+      päiväOn = "on perjantai";
+      document.getElementById("vastaus2").innerHTML = "Antamasi numero:" + päiväNro + "," + päiväOn + ".";
       break;
     case 6:
-      päiväOn = "Lauantai";
+      päiväOn = "on lauantai";
+document.getElementById("vastaus2").innerHTML = "Antamasi numero:" + päiväNro + "," + päiväOn + ".";
+      break;
+      case 7:
+      päiväOn = "on sunnuntai";
+      document.getElementById("vastaus2").innerHTML = "Antamasi numero:" + päiväNro + "," + päiväOn + ".";
       break;
     default:
-      päiväOn = "Sunnuntai";
+      päiväOn = "Anna luku 1-7 väliltä!";
+      document.getElementById("vastaus2").innerHTML = päiväOn;
       break;
   }
-  alert(päiväOn);
-  document.getElementById("vastaus2").innerHTML = "Antamasi numero:" + päiväNro + ", on " + päiväOn + ".";
+  //alert(päiväOn);
 }
 //3.Tehtävä
 //tarkastetaan onko käyttäjän antama vuosluku karkausvuosi.
@@ -68,15 +78,15 @@ function karkausVuosiko() {
   if (vuosiluku % 4 == 0 && vuosiluku % 100 !== 0) {
     karkaus = "On karkausvuosi.";
     //console.log("vuosi on jaollinen neljällä sekä ei sadalla=karkausvuosi.");
-    alert("Vuosi on karkausvuosi");
+    //alert("Vuosi on karkausvuosi");
   } else if (vuosiluku % 400 == 0) {
     karkaus = "On karkausvuosi.";
     //console.log("Vuosi on jaollinen neljälläsadalla=karkausvuosi.");
-    alert("Vuosi on karkausvuosi");
+    //alert("Vuosi on karkausvuosi");
   } else {
     karkaus = "Ei ole karkausvuosi.";
     //console.log("vuosi ei ole karkausvuosi.");
-    alert("Vuosi ei ole karkausvuosi");
+    //alert("Vuosi ei ole karkausvuosi");
   }
   document.getElementById("vastaus3").innerHTML = "Antamasi vuosi: " + vuosiluku + ".\<br>" + karkaus + ".";
 }
@@ -97,7 +107,7 @@ function summaJaKA() {
   summa = eka + toka + kolmas + neljäs + viides;
   keskiarvo = summa / 5;
   //tulostetaan summa ja keskiarvo
-  alert("Lukujen summa on: " + summa + " ja keskiarvo on: " + keskiarvo + ".");
+  //alert("Lukujen summa on: " + summa + " ja keskiarvo on: " + keskiarvo + ".");
   document.getElementById("vastaus4").innerHTML = "Lukujen summa on: " + summa + ".\<br>Keskiarvo on: " + keskiarvo + ".";
 }
 //5.Tehtävä
@@ -111,14 +121,16 @@ function lauseMuuttuja() {
   //luetaan käyttäjän antama luku muuttujaan
   joqluku = document.getElementById("joQluku").value;
   //tehrään jottai
+  /*
   for (x = 1; x < 11; x++) {
     lause += joqluku + " x " + x + " = " + joqluku * x + "\n";
   }
+  */
   for (x = 1; x < 11; x++) {
     htmlLause += joqluku + " x " + x + " = " + joqluku * x + "\<br>";
   }
   //return console.log(lause);
-  alert(lause);
+  //alert(lause);
   document.getElementById("vastaus5").innerHTML = htmlLause;
 }
 

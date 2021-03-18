@@ -22,7 +22,7 @@ function sortEm() {
   //siivotaan pilkut pois..
   var selkee = numerot.join(" ").toLocaleString();
   //anna vastais alerttina?
-  alert("Annoit numerot: " + uno + "," + dos + "," + tres + "\n" + "Pienimmästä suurimpaan: " + selkee);
+  //alert("Annoit numerot: " + uno + "," + dos + "," + tres + "\n" + "Pienimmästä suurimpaan: " + selkee);
   //kirjoitetaan vastaus myös htmlään..
   document.getElementById("vastaus1").innerHTML = "Annoit numerot: " + uno + "," + dos + "," + tres + "\<br>" + "Pienimmästä suurimpaan: " + selkee;
 }
@@ -43,7 +43,7 @@ function biggest() {
   });
   //get the last number in the array a.k.a the biggest
   var theBiggest = sortedNumbers[0];
-  alert("Annoit numerot: " + numberss + "\n" + "Suurin on: " + theBiggest);
+  //alert("Annoit numerot: " + numberss + "\n" + "Suurin on: " + theBiggest);
   //kirjoitetaan vastaus myös htmlään..
   document.getElementById("vastaus2").innerHTML = "Annoit numerot: " + numberss + "\<br>" + "Suurin on: " + theBiggest;
 }
@@ -53,11 +53,11 @@ function evnORodd() {
   var luku = document.getElementById("luku").value;
   //if parillinen do this, else do that..
   if (luku % 2 === 0) {
-    alert("Annoit luvun " + luku + ", se on parillinen.");
+    //alert("Annoit luvun " + luku + ", se on parillinen.");
     //kirjoitetaan vastaus myös htmlään..
     document.getElementById("vastaus3").innerHTML = "Annoit luvun " + luku + ", se on parillinen.";
   } else {
-    alert("Annoit luvun " + luku + ", se on pariton.");
+    //alert("Annoit luvun " + luku + ", se on pariton.");
     //kirjoitetaan vastaus myös htmlään..
     document.getElementById("vastaus3").innerHTML = "Annoit luvun " + luku + ", se on pariton.";
   }
@@ -67,16 +67,16 @@ function reteli() {
   //haetaan ikä htmlstä..
   var age = document.getElementById("ika").value;
   //jos <16 fillari, jos <18 mopo, muuten auto.
-  if (age < 16) {
-    alert("Olet " + age + " vuotta vanha, saat ajaa polkupyörää.");
+  if (age < 15) {
+    //alert("Olet " + age + " vuotta vanha, saat ajaa polkupyörää.");
     //kirjoitetaan vastaus myös htmlään..
     document.getElementById("vastaus4").innerHTML = "Olet " + age + " vuotta vanha, saat ajaa polkupyörää";
   } else if (age < 18) {
-    alert("Olet " + age + " vuotta vanha, saat ajaa mopolla.");
+    //alert("Olet " + age + " vuotta vanha, saat ajaa mopolla.");
     //kirjoitetaan vastaus myös htmlään..
     document.getElementById("vastaus4").innerHTML = "Olet " + age + " vuotta vanha, saat ajaa mopolla";
   } else
-    alert("Olet " + age + " vuotta vanha, saat ajaa autolla.");
+    //alert("Olet " + age + " vuotta vanha, saat ajaa autolla.");
   //kirjoitetaan vastaus myös htmlään..
   document.getElementById("vastaus4").innerHTML = "Olet " + age + " vuotta vanha, saat ajaa autolla.";
 }
@@ -84,9 +84,16 @@ function reteli() {
 function heippaMaailma() {
   //haetaan käyttäjän valinta htmlstä..
   var x = document.getElementById("select_lang").value;
-  alert(x);
-  //kirjoitetaan vastaus myös htmlään..
-  document.getElementById("vastaus5").innerHTML = x;
+  //tulostetaan vastuas käyttäjän valinnan mukaan
+  if (x == "en") {
+    document.getElementById("vastaus5").innerHTML = "Hello world!";
+  } else if (x == "se") {
+    document.getElementById("vastaus5").innerHTML = "Hej världen!";
+  } else if (x == "sp") {
+    document.getElementById("vastaus5").innerHTML = "Hola Mundo!";
+  } else {
+    return;
+  }
 }
 //reset answer paragraphs..
 function empty() {
@@ -101,7 +108,7 @@ function empty() {
   document.getElementById("fifth_number").value = "";
   document.getElementById("luku").value = "";
   document.getElementById("ika").value = "";
-  document.getElementById("select_lang").value = "Hello world!";
+  document.getElementById("select_lang").value = "en";
   document.getElementById("vastaus1").innerHTML = "Vastaus..";
   document.getElementById("vastaus2").innerHTML = "Vastaus..";
   document.getElementById("vastaus3").innerHTML = "Vastaus..";
