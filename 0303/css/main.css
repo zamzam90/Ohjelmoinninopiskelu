@@ -1,25 +1,48 @@
-html,
 body {
-    /* IE 10-11 didn't like using min-height */
-    height: 100%;
-}
-
-body {
-    color: darkgrey;
-    background-color: #161616;
-    margin: 2px;
-    font: 16px Sans-Serif;
+  color: darkgrey;
+  background-color: #161616;
+  margin: 2px;
+  font: 16px Sans-Serif;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: fantasy;
+}
+
+section {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #262626;
+}
+
+section button {
+  color: green;
+  background-color: #464646;
+  padding: 5px;
+  width: 80%;
 }
 
 p {
-  margin: 15px;
+  text-align: center;
 }
 
 button {
-    color: green;
-    background-color: #464646;
+  color: green;
+  background-color: #464646;
+  padding: 5px;
+}
+
+footer {
+  font-family: monospace;
+  margin: 5px 0 5px 0;
+  text-align: center;
 }
