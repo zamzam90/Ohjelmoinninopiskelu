@@ -27,30 +27,63 @@ function tehtava2() {
   var annettuSana = "", salasanaitettu;
   annettuSana = Array.from(document.getElementById("annettuSana").value);
   //console.log(annettuSana);
-  
+  for (x=0;x<annettuSana.length;x++) {
+    annettuSana[x] += "Ö";
+  }
+  //console.log(annettuSana);
+  salasanaitettu = annettuSana.join("");
+  //console.log(salasanaitettu);
+  document.getElementById("vastaus2").innerHTML = "Salasana muunnos: " + salasanaitettu;
 }
+//3.Tehtävä
+//tarkistetaan onko käyttäjän antamassa sanassa ö-kirjain.
+function ööKirjain() {
+  var annettuSana, test, onei, tuloste;
+  annettuSana = document.getElementById("tarkistettavaSana").value;
+  //console.log(annettuSana);
+  test = /ö/ig;
+  if (annettuSana.match(test)) {
+    onei = "Kyllä, sanassa on ö-kirjain";
+  } else {
+    onei = "Sanassa ei ole ö-kirjainta";
+  }
+  //console.log(test.test(annettuSana));
+  if (annettuSana.match(test)) {
+    tuloste = "\<br>Sanassa on " + annettuSana.match(test).length + " kpl ö-kirjainta.";
+  } else {
+    tuloste = "";
+  }
+  //console.log(tuloste);
+  document.getElementById("vastaus3").innerHTML = onei +  tuloste;
+}
+//4.Tehtävä
+//tulostetaan käyttäjän antamasta luvusta sen kertoma.
+
+
+
+
 //reset answer paragraphs..
 function empty() {
   //tyhjätään KAIKKI..
   document.getElementById("parillinenLuku").value = "";
   document.getElementById("annettuSana").value = "";
-  document.getElementById("").value = "";
-  document.getElementById("").value = "";
-  document.getElementById("").value = "";
-  document.getElementById("").value = "";
-  document.getElementById("").value = "";
-  document.getElementById("").value = "";
-  document.getElementById("").value = "";
+  document.getElementById("tarkistettavaSana").value = "";
+  //document.getElementById("").value = "";
+  //document.getElementById("").value = "";
+  //document.getElementById("").value = "";
+  //document.getElementById("").value = "";
+  //document.getElementById("").value = "";
+  //document.getElementById("").value = "";
   document.getElementById("vastaus1").innerHTML = "Parilliset luvut: ";
   document.getElementById("vastaus2").innerHTML = "Salasana muunnos: ";
-  document.getElementById("vastaus3").innerHTML = "Vastaus..";
-  document.getElementById("vastaus4").innerHTML = "Vastaus..";
-  document.getElementById("vastaus5").innerHTML = "Vastaus..";
-  document.getElementById("vastaus6").innerHTML = "Vastaus..";
-  document.getElementById("vastaus7").innerHTML = "Vastaus..";
-  document.getElementById("vastaus8").innerHTML = "Vastaus..";
-  document.getElementById("vastaus9").innerHTML = "Vastaus..";
-  document.getElementById("vastaus10").innerHTML = "Vastaus..";
-  document.getElementById("vastaus11").innerHTML = "Vastaus..";
+  document.getElementById("vastaus3").innerHTML = " ";
+  //document.getElementById("vastaus4").innerHTML = "Vastaus..";
+  //document.getElementById("vastaus5").innerHTML = "Vastaus..";
+  //document.getElementById("vastaus6").innerHTML = "Vastaus..";
+  //document.getElementById("vastaus7").innerHTML = "Vastaus..";
+  //document.getElementById("vastaus8").innerHTML = "Vastaus..";
+  //document.getElementById("vastaus9").innerHTML = "Vastaus..";
+  //document.getElementById("vastaus10").innerHTML = "Vastaus..";
+  //document.getElementById("vastaus11").innerHTML = "Vastaus..";
 }
 console.log("Programmed by Sami.S KKTI20C - 2021");
