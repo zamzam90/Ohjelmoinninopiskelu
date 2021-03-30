@@ -58,7 +58,19 @@ function ööKirjain() {
 }
 //4.Tehtävä
 //tulostetaan käyttäjän antamasta luvusta sen kertoma.
-
+function luvunKertoma() {
+  var kertomaLuku, tulos;
+  kertomaLuku = document.getElementById("kertomaLuku").value;
+  tulos = 1;
+  //console.log(kertomaLuku);//for testing..
+  for (var x=1; x<=kertomaLuku; x++) {
+    //console.log(x);//testing..
+    tulos *=x;
+    //console.log(tulos);
+  }
+document.getElementById("vastaus4").innerHTML = "Luvun " + kertomaLuku + " kerroin on: " + tulos;
+}
+//5.Tehtävä
 
 
 
@@ -68,7 +80,7 @@ function empty() {
   document.getElementById("parillinenLuku").value = "";
   document.getElementById("annettuSana").value = "";
   document.getElementById("tarkistettavaSana").value = "";
-  //document.getElementById("").value = "";
+  document.getElementById("kertomaLuku").value = "";
   //document.getElementById("").value = "";
   //document.getElementById("").value = "";
   //document.getElementById("").value = "";
@@ -77,7 +89,7 @@ function empty() {
   document.getElementById("vastaus1").innerHTML = "Parilliset luvut: ";
   document.getElementById("vastaus2").innerHTML = "Salasana muunnos: ";
   document.getElementById("vastaus3").innerHTML = " ";
-  //document.getElementById("vastaus4").innerHTML = "Vastaus..";
+  document.getElementById("vastaus4").innerHTML = "Vastaus..";
   //document.getElementById("vastaus5").innerHTML = "Vastaus..";
   //document.getElementById("vastaus6").innerHTML = "Vastaus..";
   //document.getElementById("vastaus7").innerHTML = "Vastaus..";
