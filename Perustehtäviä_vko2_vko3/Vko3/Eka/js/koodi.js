@@ -71,6 +71,45 @@ function luvunKertoma() {
 document.getElementById("vastaus4").innerHTML = "Luvun " + kertomaLuku + " kerroin on: " + tulos;
 }
 //5.Tehtävä
+//tulostetaan luvut 1-100 with a little twist :D
+function yksviivasata() {
+  //console.log("testing..");//for testing..
+  var numerot="";
+  for (var x=1; x<101; x++) {
+    //console.log(x);//for testing..
+    if (x%3==0 && x%5==0) {
+      numerot+="hipheijaa ";
+    } else if (x%3==0) {
+      numerot+="hip ";
+    } else if (x%5==0) {
+      numerot+="heijaa ";
+    } else {
+      numerot += x+" ";
+    }
+  }
+  //console.log(numerot);//for testing..
+  document.getElementById("vastaus5").innerHTML = numerot;
+}
+//6.Tehtävä
+//tulostetaan 10 ekaa numeroa, eli lisää for looppia...
+function kymmene() {
+  var kybä="";
+  for (var x=1;x<=10;x++) {
+    kybä += x+" ";
+  }
+  //console.log(kybä);//for testing..
+  document.getElementById("vastaus6").innerHTML = kybä;
+}
+//7.Tehtävä
+//Lasketaan ekat 10 numeroa yhteen..jos vaikka ehkä for loop..
+function kymmeneYhteen() {
+  var kybäYhteen=0;
+  for (var x=1;x<=10;x++) {
+    kybäYhteen +=x;
+  }
+  //console.log(kybäYhteen);//for testing..
+  document.getElementById("vastaus7").innerHTML = "Ekat 10 numeroa yhteen = " + kybäYhteen;
+}
 
 
 
@@ -90,8 +129,8 @@ function empty() {
   document.getElementById("vastaus2").innerHTML = "Salasana muunnos: ";
   document.getElementById("vastaus3").innerHTML = " ";
   document.getElementById("vastaus4").innerHTML = "Vastaus..";
-  //document.getElementById("vastaus5").innerHTML = "Vastaus..";
-  //document.getElementById("vastaus6").innerHTML = "Vastaus..";
+  document.getElementById("vastaus5").innerHTML = "Vastaus..";
+  document.getElementById("vastaus6").innerHTML = "Vastaus..";
   //document.getElementById("vastaus7").innerHTML = "Vastaus..";
   //document.getElementById("vastaus8").innerHTML = "Vastaus..";
   //document.getElementById("vastaus9").innerHTML = "Vastaus..";
