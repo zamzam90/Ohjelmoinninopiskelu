@@ -146,16 +146,43 @@ function potenzzi() {
 function pieninSuurin() {
   var uno, dos, tres, cuatro, cinco, luvut, järkäs, pienin, suurin;
   uno = parseInt(document.getElementById("ekaLuku").value);
+  if (isNaN(uno)) {
+    alert("Anna vain numeroita!");
+    return false;
+  }
   dos = parseInt(document.getElementById("tokaLuku").value);
+  if (isNaN(dos)) {
+    alert("Anna vain numeroita!");
+    return false;
+  }
   tres = parseInt(document.getElementById("kolmasLuku").value);
+  if (isNaN(tres)) {
+    alert("Anna vain numeroita!");
+    return false;
+  }
   cuatro = parseInt(document.getElementById("neljäsLuku").value);
+  if (isNaN(cuatro)) {
+    alert("Anna vain numeroita!");
+    return false;
+  }
   cinco = parseInt(document.getElementById("viidesLuku").value);
+  if (isNaN(cinco)) {
+    alert("Anna vain numeroita!");
+    return false;
+  }
   luvut = [uno, dos, tres, cuatro, cinco];
-  järkäs = luvut.sort(function(b, a) {return b - a;});
+  luvutt = [uno, dos, tres, cuatro, cinco];
+  järkäs = luvut.sort(function(b, a) {
+    return b - a;
+  });
   pienin = järkäs[0];
   suurin = järkäs[järkäs.length - 1];
-  document.getElementById("vastaus9").innerHTML = "Annoit luvut: " + luvut + "\<br>Pienin: " + pienin + " Suurin: " + suurin;
+  document.getElementById("vastaus9").innerHTML = "Annoit luvut: " + luvutt + "\<br>Pienin: " + pienin + " Suurin: " + suurin;
 }
+//10.Tehtävä
+//
+
+
 
 
 //reset answer paragraphs..
