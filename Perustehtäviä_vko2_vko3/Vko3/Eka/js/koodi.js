@@ -1,9 +1,14 @@
 //filter some linter errors(brackets editor)...
-/*global console*//* eslint no-console: "off" */
-/*global prompt*//* eslint no-prompt: "off" */
-/*global document*//* eslint no-document: "off" */
-/*global window*//* eslint no-window: "off" */
-/*global undef*//* eslint no-undef: "off" */
+/*global console*/
+/* eslint no-console: "off" */
+/*global prompt*/
+/* eslint no-prompt: "off" */
+/*global document*/
+/* eslint no-document: "off" */
+/*global window*/
+/* eslint no-window: "off" */
+/*global undef*/
+/* eslint no-undef: "off" */
 /* eslint no-unused-vars: "off" */
 
 //Vko 3 perustehtäviä, ekat.
@@ -11,23 +16,30 @@ console.log("Tässä kolmosviikon ekat tehtävät..");
 //1.tehtävä
 //pyydetään käyttäjältä parillinen luku, tulostetaan parilliset luvut siihen asti(poislukien 0).
 function tehtava1() {
-  var nmbr = 0, tuloste = "", x;
+  var nmbr = 0,
+    tuloste = "",
+    x;
   nmbr = parseInt(document.getElementById("parillinenLuku").value);
   //console.log(nmbr);
-  for (x=2;x<=nmbr;x+=2) {
-    tuloste += x;
-    tuloste += " ";
+  if (isNaN(nmbr)) {
+    alert("Anna numero!");
+  } else {
+    for (x = 2; x <= nmbr; x += 2) {
+      tuloste += x;
+      tuloste += " ";
+    }
+    document.getElementById("vastaus1").innerHTML = "Parilliset luvut: " + tuloste;
   }
   //console.log(tuloste);
-  document.getElementById("vastaus1").innerHTML = "Parilliset luvut: " + tuloste;
 }
 //2.tehtävä
 //muutetaan käyttäjän antama sana "salasanaksi" :D
 function tehtava2() {
-  var annettuSana = "", salasanaitettu;
+  var annettuSana = "",
+    salasanaitettu;
   annettuSana = Array.from(document.getElementById("annettuSana").value);
   //console.log(annettuSana);
-  for (x=0;x<annettuSana.length;x++) {
+  for (x = 0; x < annettuSana.length; x++) {
     annettuSana[x] += "Ö";
   }
   //console.log(annettuSana);
@@ -54,37 +66,40 @@ function ööKirjain() {
     tuloste = "";
   }
   //console.log(tuloste);
-  document.getElementById("vastaus3").innerHTML = onei +  tuloste;
+  document.getElementById("vastaus3").innerHTML = onei + tuloste;
 }
 //4.Tehtävä
 //tulostetaan käyttäjän antamasta luvusta sen kertoma.
 function luvunKertoma() {
-  var kertomaLuku, tulos;
+  var kertomaLuku, tulos = 1;
   kertomaLuku = document.getElementById("kertomaLuku").value;
-  tulos = 1;
-  //console.log(kertomaLuku);//for testing..
-  for (var x=1; x<=kertomaLuku; x++) {
-    //console.log(x);//testing..
-    tulos *=x;
-    //console.log(tulos);
+  if (isNaN(kertomaLuku)) {
+    alert("Anna numero!");
+  } else {
+    //console.log(kertomaLuku);//for testing..
+    for (var x = 1; x <= kertomaLuku; x++) {
+      //console.log(x);//testing..
+      tulos *= x;
+      //console.log(tulos);
+    }
+    document.getElementById("vastaus4").innerHTML = "Luvun " + kertomaLuku + " kerroin on: " + tulos;
   }
-document.getElementById("vastaus4").innerHTML = "Luvun " + kertomaLuku + " kerroin on: " + tulos;
 }
 //5.Tehtävä
 //tulostetaan luvut 1-100 with a little twist :D
 function yksviivasata() {
   //console.log("testing..");//for testing..
-  var numerot="";
-  for (var x=1; x<101; x++) {
+  var numerot = "";
+  for (var x = 1; x < 101; x++) {
     //console.log(x);//for testing..
-    if (x%3==0 && x%5==0) {
-      numerot+="hipheijaa ";
-    } else if (x%3==0) {
-      numerot+="hip ";
-    } else if (x%5==0) {
-      numerot+="heijaa ";
+    if (x % 3 == 0 && x % 5 == 0) {
+      numerot += "hipheijaa ";
+    } else if (x % 3 == 0) {
+      numerot += "hip ";
+    } else if (x % 5 == 0) {
+      numerot += "heijaa ";
     } else {
-      numerot += x+" ";
+      numerot += x + " ";
     }
   }
   //console.log(numerot);//for testing..
@@ -93,9 +108,9 @@ function yksviivasata() {
 //6.Tehtävä
 //tulostetaan 10 ekaa numeroa, eli lisää for looppia...
 function kymmene() {
-  var kybä="";
-  for (var x=1;x<=10;x++) {
-    kybä += x+" ";
+  var kybä = "";
+  for (var x = 1; x <= 10; x++) {
+    kybä += x + " ";
   }
   //console.log(kybä);//for testing..
   document.getElementById("vastaus6").innerHTML = kybä;
@@ -103,14 +118,28 @@ function kymmene() {
 //7.Tehtävä
 //Lasketaan ekat 10 numeroa yhteen..jos vaikka ehkä for loop..
 function kymmeneYhteen() {
-  var kybäYhteen=0;
-  for (var x=1;x<=10;x++) {
-    kybäYhteen +=x;
+  var kybäYhteen = 0;
+  for (var x = 1; x <= 10; x++) {
+    kybäYhteen += x;
   }
   //console.log(kybäYhteen);//for testing..
   document.getElementById("vastaus7").innerHTML = "Ekat 10 numeroa yhteen = " + kybäYhteen;
 }
-
+//8.Tehtävä
+//potenssilasku
+function potenzzi() {
+  var kLuku, potenssiLuku;
+  kLuku = parseInt(document.getElementById("korotettava").value);
+  if (isNaN(kLuku)) {
+    alert("Anna numero!");
+  }
+  potenssiLuku = parseInt(document.getElementById("potenssi").value);
+  if (isNaN(potenssiLuku)) {
+    alert("Anna numero!");
+  }
+  console.log(kLuku + " " + potenssiLuku);//dor testing..
+  
+}
 
 
 //reset answer paragraphs..

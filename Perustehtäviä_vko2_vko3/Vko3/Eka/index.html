@@ -17,13 +17,13 @@
   </header>
 
   <section class="tehtava">
-      <h1>Tehtävä 1.</h1>
-      <p>Anna parillinen luku, tulostetaan kaikki parilliset luvut siihen asti poislukien 0.</p>
-      <form class="" action="index.html" method="post">
-        <p>Anna luku: <input type="number" id="parillinenLuku" value="" placeholder="..parillinen.."></p>
-        <button type="button" name="button" onclick="return tehtava1();">Tulosta parilliset</button>
-      </form>
-      <p class="vastausss" id="vastaus1">Parilliset luvut: </p>
+    <h1>Tehtävä 1.</h1>
+    <p>Anna parillinen luku, tulostetaan kaikki parilliset luvut siihen asti poislukien 0.</p>
+    <form class="" action="index.html" method="post">
+      <p>Anna luku: <input type="text" id="parillinenLuku" value="" placeholder="..parillinen.."></p>
+      <button type="button" name="button" onclick="return tehtava1();">Tulosta parilliset</button>
+    </form>
+    <p class="vastausss" id="vastaus1">Parilliset luvut: </p>
   </section>
   <section class="tehtava">
     <h1>Tehtävä 2.</h1>
@@ -47,7 +47,7 @@
     <h1>Tehtävä 4.</h1>
     <p>Anna luku josta lasketaan sen kertoma.</p>
     <form class="" action="index.html" method="post">
-      <p>Anna luku: <input type="number" id="kertomaLuku" value="" placeholder=" lasketaan kertoma"></p>
+      <p>Anna luku: <input type="text" id="kertomaLuku" value="" placeholder=" lasketaan kertoma"></p>
       <button type="button" id="button" onclick="return luvunKertoma();">Laske kertoma</button>
     </form>
     <p class="vastausss" id="vastaus4"> </p>
@@ -64,25 +64,26 @@
     <h1>Tehtävä 6.</h1>
     <p>Tulostetaan 10 ensimmäistä numeroa.</p>
     <form class="" action="index.html" method="post">
-<button type="button" name="button" onclick="return kymmene();">Tulosta</button>
+      <button type="button" name="button" onclick="return kymmene();">Tulosta</button>
     </form>
     <p class="vastausss" id="vastaus6">&nbsp;</p>
   </section>
-
   <section class="tehtava">
     <h1>Tehtävä 7.</h1>
     <p>Lasketaan 10 ensimmäistä numeroa yhteen.</p>
     <form class="" action="index.html" method="post">
-<button type="button" name="button" onclick="return kymmeneYhteen();">Laske</button>
+      <button type="button" name="button" onclick="return kymmeneYhteen();">Laske</button>
     </form>
     <p class="vastausss" id="vastaus7">&nbsp;</p>
   </section>
 
   <section class="tehtava">
     <h1>Tehtävä 8.</h1>
-    <p></p>
+    <p>Anna kaksi lukua ja lasketaan ensimmäisen potenssiin toinen esim. 5 ja 2 = 5<sup>2</sup> = 25</p>
     <form class="" action="index.html" method="post">
-
+      <p>Anna korotettava luku: <input type="text" name="" value="" id="korotettava" placeholder="korotettava luku"></p>
+      <p>Anna potenssi: <input type="text" name="" value="" id="potenssi" placeholder="potenssi"></p>
+      <button type="button" name="button" onclick="return potenzzi();">Do the math</button>
     </form>
     <p class="vastausss" id="vastaus8">&nbsp;</p>
   </section>
