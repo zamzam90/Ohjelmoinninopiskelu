@@ -137,7 +137,7 @@ function potenzzi() {
   if (isNaN(potenssiLuku)) {
     alert("Anna numero!");
   }
-  console.log(kLuku + " " + potenssiLuku);//dor testing..
+  console.log(kLuku + " " + potenssiLuku);//for testing..
   console.log(Math.pow(kLuku,potenssiLuku));
 }
 
