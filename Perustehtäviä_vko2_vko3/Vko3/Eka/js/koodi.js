@@ -192,8 +192,11 @@ function empty() {
   document.getElementById("annettuSana").value = "";
   document.getElementById("tarkistettavaSana").value = "";
   document.getElementById("kertomaLuku").value = "";
-  //document.getElementById("").value = "";
-  //document.getElementById("").value = "";
+  document.getElementById("ekaLuku").value = "";
+  document.getElementById("tokaLuku").value = "";
+  document.getElementById("kolmasLuku").value = "";
+  document.getElementById("neljäsLuku").value = "";
+  document.getElementById("viidesLuku").value = "";
   //document.getElementById("").value = "";
   //document.getElementById("").value = "";
   //document.getElementById("").value = "";
@@ -205,7 +208,7 @@ function empty() {
   document.getElementById("vastaus6").innerHTML = "Vastaus..";
   document.getElementById("vastaus7").innerHTML = "Vastaus..";
   document.getElementById("vastaus8").innerHTML = "Vastaus..";
-  //document.getElementById("vastaus9").innerHTML = "Vastaus..";
+  document.getElementById("vastaus9").innerHTML = "Vastaus..";
   //document.getElementById("vastaus10").innerHTML = "Vastaus..";
   //document.getElementById("vastaus11").innerHTML = "Vastaus..";
 }
