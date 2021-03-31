@@ -128,7 +128,7 @@ function kymmeneYhteen() {
 //8.Tehtävä
 //potenssilasku
 function potenzzi() {
-  var kLuku, potenssiLuku;
+  var kLuku, potenssiLuku, potenssis;
   kLuku = parseInt(document.getElementById("korotettava").value);
   if (isNaN(kLuku)) {
     alert("Anna numero!");
@@ -137,8 +137,9 @@ function potenzzi() {
   if (isNaN(potenssiLuku)) {
     alert("Anna numero!");
   }
-  console.log(kLuku + " " + potenssiLuku);//for testing..
-  console.log(Math.pow(kLuku,potenssiLuku));
+  //console.log(kLuku + " " + potenssiLuku);//for testing..
+  potenssis = Math.pow(kLuku,potenssiLuku);
+  document.getElementById("vastaus8").innerHTML = kLuku + "\<sup>" + potenssiLuku + "\</sup>=" + potenssis;
 }
 
 
