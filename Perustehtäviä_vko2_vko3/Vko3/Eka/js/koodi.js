@@ -138,8 +138,23 @@ function potenzzi() {
     alert("Anna numero!");
   }
   //console.log(kLuku + " " + potenssiLuku);//for testing..
-  potenssis = Math.pow(kLuku,potenssiLuku);
+  potenssis = Math.pow(kLuku, potenssiLuku);
   document.getElementById("vastaus8").innerHTML = kLuku + "\<sup>" + potenssiLuku + "\</sup>=" + potenssis;
+}
+//9.Tehtävä
+//pyydetään 5 lukua, etsitään pienin ja suurin
+function pieninSuurin() {
+  var uno, dos, tres, cuatro, cinco, luvut, järkäs, pienin, suurin;
+  uno = parseInt(document.getElementById("ekaLuku").value);
+  dos = parseInt(document.getElementById("tokaLuku").value);
+  tres = parseInt(document.getElementById("kolmasLuku").value);
+  cuatro = parseInt(document.getElementById("neljäsLuku").value);
+  cinco = parseInt(document.getElementById("viidesLuku").value);
+  luvut = [uno, dos, tres, cuatro, cinco];
+  järkäs = luvut.sort(function(b, a) {return b - a;});
+  pienin = järkäs[0];
+  suurin = järkäs[järkäs.length - 1];
+  document.getElementById("vastaus9").innerHTML = "Annoit luvut: " + luvut + "\<br>Pienin: " + pienin + " Suurin: " + suurin;
 }
 
 
@@ -161,8 +176,8 @@ function empty() {
   document.getElementById("vastaus4").innerHTML = "Vastaus..";
   document.getElementById("vastaus5").innerHTML = "Vastaus..";
   document.getElementById("vastaus6").innerHTML = "Vastaus..";
-  //document.getElementById("vastaus7").innerHTML = "Vastaus..";
-  //document.getElementById("vastaus8").innerHTML = "Vastaus..";
+  document.getElementById("vastaus7").innerHTML = "Vastaus..";
+  document.getElementById("vastaus8").innerHTML = "Vastaus..";
   //document.getElementById("vastaus9").innerHTML = "Vastaus..";
   //document.getElementById("vastaus10").innerHTML = "Vastaus..";
   //document.getElementById("vastaus11").innerHTML = "Vastaus..";
