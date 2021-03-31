@@ -138,7 +138,7 @@ function potenzzi() {
     alert("Anna numero!");
   }
   console.log(kLuku + " " + potenssiLuku);//dor testing..
-  
+  console.log(Math.pow(kLuku,potenssiLuku));
 }
 
 
