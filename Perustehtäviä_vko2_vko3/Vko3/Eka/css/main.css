@@ -23,7 +23,7 @@ header {
   padding: 10px 10px 10px 30px;
   border-radius: 5px;
   background-color: #262626;
-  box-shadow: 3px 3px 4px green;
+  box-shadow: 3px 3px 4px #004500;
 }
 
 p {
@@ -42,7 +42,6 @@ footer {
   padding: 5px;
 }
 
-
 .tehtava h1 {
   text-align: left;
   font-size: 225%;
@@ -57,8 +56,8 @@ footer {
 
 .vastausss {
   margin-top: 35px;
-  margin-left: auto!important;
-  margin-right: auto!important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding: 5px;
   border: 1px solid red;
   width: 75%
