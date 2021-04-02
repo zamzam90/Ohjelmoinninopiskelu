@@ -170,17 +170,34 @@ function pieninSuurin() {
     alert("Anna vain numeroita!");
     return false;
   }
+  origLuvut = [uno, dos, tres, cuatro, cinco];
   luvut = [uno, dos, tres, cuatro, cinco];
-  luvutt = [uno, dos, tres, cuatro, cinco];
   järkäs = luvut.sort(function(b, a) {
     return b - a;
   });
   pienin = järkäs[0];
   suurin = järkäs[järkäs.length - 1];
-  document.getElementById("vastaus9").innerHTML = "Annoit luvut: " + luvutt + "\<br>Pienin: " + pienin + " Suurin: " + suurin;
+  document.getElementById("vastaus9").innerHTML = "Annoit luvut: " + origLuvut + "\<br>Pienin: " + pienin + " Suurin: " + suurin;
 }
 //10.Tehtävä
-//
+//Salasanoitetaan käyttäjän sana, lisätään random kirjain annetun sanan kirjaimien väliin..
+function tehtava10() {
+  var annettusana = "",
+    randomKirjain = "",
+    salasanoitettu = [];
+  const aakkoset = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖabcdefghijklmnopqrstuvwxyzåäö";
+  annettuSana = Array.from(document.getElementById("parempiSalasana").value);
+  //console.log(annettuSana);//for testing..
+  //console.log(randomKirjain);for testing..
+  //tehrää for looppi joka käy listan jokaisen kohdan läpi ja lisää random kirjaimen
+  for (var x = 0; x < annettuSana.length; x++) {
+    randomKirjain = aakkoset[Math.floor(Math.random() * aakkoset.length)];//Arvotaan random kirjain.
+    annettuSana[x] += randomKirjain;
+  }
+  salasanoitettu = annettuSana.join("");
+  //console.log(salasanoitettu);//for testing..
+  document.getElementById("vastaus10").innerHTML = "Annettu sana salasanoitettuna: " + salasanoitettu;
+}
 
 
 
@@ -197,7 +214,7 @@ function empty() {
   document.getElementById("kolmasLuku").value = "";
   document.getElementById("neljäsLuku").value = "";
   document.getElementById("viidesLuku").value = "";
-  //document.getElementById("").value = "";
+  document.getElementById("parempiSalasana").value = "";
   //document.getElementById("").value = "";
   //document.getElementById("").value = "";
   document.getElementById("vastaus1").innerHTML = "Parilliset luvut: ";
@@ -209,7 +226,7 @@ function empty() {
   document.getElementById("vastaus7").innerHTML = "Vastaus..";
   document.getElementById("vastaus8").innerHTML = "Vastaus..";
   document.getElementById("vastaus9").innerHTML = "Vastaus..";
-  //document.getElementById("vastaus10").innerHTML = "Vastaus..";
+  document.getElementById("vastaus10").innerHTML = "Vastaus..";
   //document.getElementById("vastaus11").innerHTML = "Vastaus..";
 }
 console.log("Programmed by Sami.S KKTI20C - 2021");
