@@ -1,8 +1,13 @@
 body {
   color: darkgrey;
   background-color: #161616;
+  background-image: url("../network.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 2px;
   font: 16px Sans-Serif;
+  overflow: auto;
 }
 
 * {
@@ -10,47 +15,83 @@ body {
 }
 
 header {
-  font-family: fantasy;
+  font-size: 250%;
+  font-family: 'Caveat', cursive;
 }
 
-section {
-  margin-top: 15px;
-  margin-bottom: 15px;
+header>div {
+  width: 33%;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #262626;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 p {
   text-align: center;
 }
 
-button {
-  color: green;
-  background-color: #464646;
-  padding: 5px;
+input {
+  text-align: center;
+}
+
+section>div {
+  width: 33%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 footer {
   font-family: monospace;
   margin: 5px 0 5px 0;
   text-align: center;
+  ;
 }
 
-.tehtava h1 {
-  text-decoration: underline;
+.flex-kontti {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-.tehtava p {
-  color: green;
+.flex-kontti>section {
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  background-color: #19334d;
+  box-shadow: 3px 3px 5px #060d13;
+}
+
+.flex-kontti button {
+  color: #8cb3d9;
+  background-color: #19334d;
+  padding: 5px;
+}
+
+.flex-kontti h1 {
+  color: #6699cc;
+  text-align: left;
+  font-size: 225%;
+  font-family: 'Shadows Into Light', cursive;
+  text-shadow: 2px 2px black;
+}
+
+.flex-kontti p {
+  color: #8cb3d9;
   text-align: left;
 }
 
-.vastausss {
+.vastausss {/*
+  margin-top: 35px;
+  margin-left: auto !important;
+  margin-right: auto !important;*/
   padding: 5px;
   border: 1px solid red;
-  width: 300px;
+  /*width: 75%*/
 }
