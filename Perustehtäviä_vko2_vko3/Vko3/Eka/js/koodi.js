@@ -1,16 +1,3 @@
-//filter some linter errors(brackets editor)...
-/*global console*/
-/* eslint no-console: "off" */
-/*global prompt*/
-/* eslint no-prompt: "off" */
-/*global document*/
-/* eslint no-document: "off" */
-/*global window*/
-/* eslint no-window: "off" */
-/*global undef*/
-/* eslint no-undef: "off" */
-/* eslint no-unused-vars: "off" */
-
 //Vko 3 perustehtäviä, ekat.
 console.log("Tässä kolmosviikon ekat tehtävät..");
 //1.tehtävä
@@ -30,7 +17,6 @@ function tehtava1() {
     }
     document.getElementById("vastaus1").innerHTML = "Parilliset luvut: " + tuloste;
   }
-  //console.log(tuloste);
 }
 //2.tehtävä
 //muutetaan käyttäjän antama sana "salasanaksi" :D
@@ -39,6 +25,7 @@ function tehtava2() {
     salasanaitettu;
   annettuSana = Array.from(document.getElementById("annettuSana").value);
   //console.log(annettuSana);
+  //for loopilla käydään listan jokainen kohta läpi ja lisätään jokaiseen kohtaan Ö kirjain..
   for (x = 0; x < annettuSana.length; x++) {
     annettuSana[x] += "Ö";
   }
@@ -191,20 +178,73 @@ function tehtava10() {
   //console.log(randomKirjain);for testing..
   //tehrää for looppi joka käy listan jokaisen kohdan läpi ja lisää random kirjaimen
   for (var x = 0; x < annettuSana.length; x++) {
-    randomKirjain = aakkoset[Math.floor(Math.random() * aakkoset.length)];//Arvotaan random kirjain.
+    randomKirjain = aakkoset[Math.floor(Math.random() * aakkoset.length)]; //Arvotaan random kirjain.
     annettuSana[x] += randomKirjain;
   }
   salasanoitettu = annettuSana.join("");
   //console.log(salasanoitettu);//for testing..
   document.getElementById("vastaus10").innerHTML = "Annettu sana salasanoitettuna: " + salasanoitettu;
 }
-
-
-
-
-//reset answer paragraphs..
+//11.Tehtävä
+//pyydetään kaksi numeroa ja tulostetaan niiden väliltä parittomat ja parilliset ja niiden summat
+function parittomatJaParillisetJaSummat() {
+  var ekaluku,
+    tokaluku,
+    parillinen,
+    pariton,
+    paritLuvut = "",
+    parilLuvut = "",
+    paritSumma = 0,
+    parilSumma = 0;
+  //haetaan käyttäjän antamat luvut..tarkistetaan että on annettu numeroita
+  //ja että ensimmäinen on pienempi kuin toinen.
+  ekaluku = parseInt(document.getElementById("ekaNumero").value);
+  if (isNaN(ekaluku)) {
+    alert("Anna vain numeroita!");
+    return false;
+  }
+  tokaluku = parseInt(document.getElementById("tokaNumero").value);
+  if (isNaN(tokaluku)) {
+    alert("Anna vain numeroita!");
+    return false;
+  }
+  if (ekaluku > tokaluku) {
+    alert("Ensimmäisen luvun pitää olla pienempi!");
+    return false;
+  }
+  //Parilliset ja summa
+  //tarkistetaan onko ensimmäinen luku parillinen,jos ei, +1 niin saadaan siitä parillinen.
+  if (ekaluku % 2 == 0) {
+    parillinen = ekaluku;
+  } else {
+    parillinen = ekaluku + 1;
+  }
+  //console.log(parillinen);//for testing..
+  //for loopilla lisätään 2 aina tokaan lukuun asti..ja lasketaan luvut summa samassa.
+  for (i = parillinen; i <= tokaluku; i += 2) {
+    parilLuvut += i + " ";
+    parilSumma += i;
+  }
+  //console.log(parilLuvut);//for
+  //console.log(parilSumma);//testing
+  //Parittomat ja summa
+  //tarkistetaan onko ensimmäinen luku pariton, jos ei, +1 niin saadaan siitä pariton.
+  if (ekaluku % 2 == 0) {
+    pariton = ekaluku + 1;
+  } else {
+    pariton = ekaluku;
+  }
+  //console.log(pariton);//for testing..
+  //for loopilla lisätään 2 aina tokaan lukuun asti ja lasketaan summa samalla.
+  for (j = pariton; j <= tokaluku; j += 2) {
+    paritLuvut += j + " ";
+    paritSumma += j;
+  }
+  document.getElementById("vastaus11").innerHTML = "Parilliset luvut: " + parilLuvut + " ja niiden summa: " + parilSumma +
+    ".\<br>Parittomat luvut: " + paritLuvut + " ja niiden summa: " + paritSumma + ".";
+}
+//tyhjätään KAIKKI..
 function empty() {
-  //tyhjätään KAIKKI..
   document.getElementById("parillinenLuku").value = "";
   document.getElementById("annettuSana").value = "";
   document.getElementById("tarkistettavaSana").value = "";
@@ -215,8 +255,8 @@ function empty() {
   document.getElementById("neljäsLuku").value = "";
   document.getElementById("viidesLuku").value = "";
   document.getElementById("parempiSalasana").value = "";
-  //document.getElementById("").value = "";
-  //document.getElementById("").value = "";
+  document.getElementById("ekaNumero").value = "";
+  document.getElementById("tokaNumero").value = "";
   document.getElementById("vastaus1").innerHTML = "Parilliset luvut: ";
   document.getElementById("vastaus2").innerHTML = "Salasana muunnos: ";
   document.getElementById("vastaus3").innerHTML = " ";
@@ -227,6 +267,6 @@ function empty() {
   document.getElementById("vastaus8").innerHTML = "Vastaus..";
   document.getElementById("vastaus9").innerHTML = "Vastaus..";
   document.getElementById("vastaus10").innerHTML = "Vastaus..";
-  //document.getElementById("vastaus11").innerHTML = "Vastaus..";
+  document.getElementById("vastaus11").innerHTML = "Vastaus..";
 }
 console.log("Programmed by Sami.S KKTI20C - 2021");
