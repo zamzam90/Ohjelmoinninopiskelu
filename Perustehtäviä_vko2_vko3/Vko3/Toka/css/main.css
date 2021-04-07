@@ -16,10 +16,10 @@ body {
 
 header {
   font-size: 250%;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
 }
 
-header>div {
+header > div {
   width: 33%;
   margin-left: auto;
   margin-right: auto;
@@ -35,7 +35,11 @@ input {
   text-align: center;
 }
 
-section>div {
+ul > li {
+  color: #8cb3d9;
+}
+
+section > div {
   width: 33%;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -50,7 +54,6 @@ footer {
   font-family: monospace;
   margin: 5px 0 5px 0;
   text-align: center;
-  ;
 }
 
 .flex-kontti {
@@ -59,7 +62,7 @@ footer {
   justify-content: center;
 }
 
-.flex-kontti>section {
+.flex-kontti > section {
   margin: 15px;
   padding: 20px;
   border-radius: 10px;
@@ -78,20 +81,11 @@ footer {
   color: #6699cc;
   text-align: left;
   font-size: 225%;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
   text-shadow: 2px 2px black;
 }
 
 .flex-kontti p {
   color: #8cb3d9;
   text-align: left;
-}
-
-.vastausss {/*
-  margin-top: 35px;
-  margin-left: auto !important;
-  margin-right: auto !important;*/
-  padding: 5px;
-  border: 1px solid red;
-  /*width: 75%*/
 }
