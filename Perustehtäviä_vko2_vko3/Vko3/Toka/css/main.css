@@ -1,4 +1,14 @@
+/* asetetaan sivunpituus 100% */
+html,
 body {
+  min-height: 100vh;
+}
+body {
+  /* piilotetaan scrollbar(niin että se kuitenkin toimii) */
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  /* scrollbar piilossa mutta toiminnassa */
   color: darkgrey;
   background-color: #161616;
   background-image: url("../network.jpg");
@@ -9,16 +19,19 @@ body {
   font: 16px Sans-Serif;
   overflow: auto;
 }
-
+/* scrollbar piilotus */
+body::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
 * {
   box-sizing: border-box;
 }
-
 header {
   font-size: 250%;
   font-family: "Caveat", cursive;
 }
-
 header > div {
   width: 33%;
   margin-left: auto;
@@ -26,19 +39,15 @@ header > div {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
-
 p {
   text-align: center;
 }
-
 input {
   text-align: center;
 }
-
 ul > li {
   color: #8cb3d9;
 }
-
 section > div {
   width: 33%;
   padding-top: 3px;
@@ -46,37 +55,35 @@ section > div {
   margin-top: 35px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
-
 footer {
   font-family: monospace;
   margin: 5px 0 5px 0;
   text-align: center;
+  text-shadow: 0 0 6px white, 0 0 6px red;
 }
-
 .flex-kontti {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-
 .flex-kontti > section {
   margin: 15px;
   padding: 20px;
   border-radius: 10px;
   width: 500px;
   background-color: #19334d;
+  border: thin solid darkslategray;
   box-shadow: 3px 3px 5px #060d13;
 }
-
 .flex-kontti button {
   color: #8cb3d9;
   background-color: #19334d;
   padding: 5px;
 }
-
 .flex-kontti h1 {
   color: #6699cc;
   text-align: left;
@@ -84,7 +91,6 @@ footer {
   font-family: "Shadows Into Light", cursive;
   text-shadow: 2px 2px black;
 }
-
 .flex-kontti p {
   color: #8cb3d9;
   text-align: left;
