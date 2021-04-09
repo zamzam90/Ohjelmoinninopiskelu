@@ -121,17 +121,59 @@ function muunnaTaulukko() {
 }
 //4.Tehtävä
 //tehdään taulukko kaikista korttipakankorteista, arvotaan sieltä 5korttia..
-
+function arvoKortit() {
+  //alustetaan muuttujat..
+  var korttiPakka = [""],
+    maat = ["&#9828;", "&#9827;", "&#9826;", "&#9825;"],
+    numerot = [
+      "A",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "J",
+      "Q",
+      "K",
+    ],
+    count = 0,
+    arvotutKortit = [];
+  //tehdään korttipakka..
+  for (m = 0; m < maat.length; m++) {
+    for (n = 0; n < numerot.length; n++) {
+      if (m == maat.length - 1 && n == numerot.length - 1) {
+        korttiPakka[count] = maat[m] + numerot[n];
+      } else {
+        korttiPakka[count] = maat[m] + numerot[n];
+        count++;
+      }
+    }
+  }
+  //console.log("pakka " + korttiPakka);
+  //"sekoitetaan" pakka.. https://www.w3schools.com/js/js_array_sort.asp
+  korttiPakka.sort(function (a, b) {
+    return 0.5 - Math.random();
+  });
+  //console.log("sekotetut " + korttiPakka);
+  //otetaan pakasta 5 korttia..
+  for (var k = 0; k < 5; k++) {
+    arvotutKortit[k] = korttiPakka[k];
+  }
+  //console.log("5-korttia " + arvotutKortit);
+  //tulostetaan ne htmlään..
+  arvotutKortit = arvotutKortit.join(" ");
+  document.getElementById("vastaus4").innerHTML = arvotutKortit;
+}
 //tyhjätään KAIKKI..
 function empty() {
   document.getElementById("scrabbleSana").value = "";
-  //document.getElementById("").value = "";
-  //document.getElementById("").value = "";
-  //document.getElementById("").value = "";
-  //document.getElementById("").value = "";
   document.getElementById("vastaus1").innerHTML = "";
   document.getElementById("vastaus2").innerHTML = "";
   document.getElementById("vastaus3").innerHTML = "";
-  //document.getElementById("vastaus4").innerHTML = "";
+  document.getElementById("vastaus4").innerHTML = "";
 }
 console.log("Programmed by Sami.S KKTI20C - 2021");
