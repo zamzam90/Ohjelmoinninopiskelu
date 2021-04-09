@@ -45,12 +45,15 @@ function laskeSanaPisteet() {
       case "ö":
       case "d":
         pisteet += 7;
+        break;
       case "b":
       case "f":
       case "g":
         pisteet += 8;
+        break;
       case "c":
         pisteet += 10;
+        break;
       default:
         pisteet += 12;
         break;
