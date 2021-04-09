@@ -75,17 +75,17 @@ function lototaan() {
     numerot.push(i);
   }
   //console.log(numerot);
-  //sekoitetaan taulukko https://www.w3schools.com/js/js_array_sort.asp
+  //sekoitetaan numerot-taulukko https://www.w3schools.com/js/js_array_sort.asp
   numerot.sort(function (a, b) {
     return 0.5 - Math.random();
   });
   //console.log(numerot);
-  //otetaan numerot-taulukosta 7 numeroa tulos-taulukkoon
+  //otetaan sekoitetusta numerot-taulukosta 7 numeroa tulos-taulukkoon
   for (var j = 0; j < 7; j++) {
     tulos[j] = numerot[j];
   }
   //console.log(tulos);
-  //laitetaan numerot järjesteykseen(pienimmästä isoimpaan) ja poistetaan taulukosta pilkut
+  //laitetaan numerot järjestykseen(pienimmästä isoimpaan) ja poistetaan taulukosta pilkut
   tulos = tulos.sort((a, b) => a - b);
   tulos = tulos.join(" ");
   //console.log(tulos);
@@ -94,16 +94,34 @@ function lototaan() {
     "Arvotut numerot ovat: " + tulos;
 }
 //3.Tehtävä
-//muunnetaan ennalta määritelty js taulukko html taulukkomuotoon..
-
+//muunnetaan ennalta määritelty js-taulukko html-taulukkomuotoon..
+function muunnaTaulukko() {
+  var tauluNumerot = [];
+  tauluNumerot = [
+    [1, 2, 1, 24],
+    [8, 11, 9, 4],
+    [7, 0, 7, 27],
+    [7, 4, 28, 14],
+    [3, 10, 26, 7],
+  ];
+  //console.log(tauluNumerot);
+  var htmlTaulukko = '<table align="center" border="1">';
+  /* kahdella for loopilla lisätään tablerowit ja niihin tablecellit 
+  mihin sijoitetaan js taulukosta tiedot */
+  for (var y = 0; y < tauluNumerot.length; y++) {
+    htmlTaulukko += "<tr>";
+    for (var z = 0; z < tauluNumerot[y].length; z++) {
+      htmlTaulukko += "<td>" + tauluNumerot[y][z] + "</td>";
+    }
+    htmlTaulukko += "</tr>";
+  }
+  htmlTaulukko += "</table>";
+  //tulostetaan taulukko htmlään
+  document.getElementById("vastaus3").innerHTML = htmlTaulukko;
+}
 //4.Tehtävä
 //tehdään taulukko kaikista korttipakankorteista, arvotaan sieltä 5korttia..
 
-/* Randomi numero funktio..
-https://www.w3schools.com/JS/js_random.asp */
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 //tyhjätään KAIKKI..
 function empty() {
   document.getElementById("scrabbleSana").value = "";
@@ -113,7 +131,7 @@ function empty() {
   //document.getElementById("").value = "";
   document.getElementById("vastaus1").innerHTML = "";
   document.getElementById("vastaus2").innerHTML = "";
-  //document.getElementById("vastaus3").innerHTML = "";
+  document.getElementById("vastaus3").innerHTML = "";
   //document.getElementById("vastaus4").innerHTML = "";
 }
 console.log("Programmed by Sami.S KKTI20C - 2021");
