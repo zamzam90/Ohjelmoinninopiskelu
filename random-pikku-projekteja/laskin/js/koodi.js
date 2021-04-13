@@ -5,7 +5,7 @@ var tulos = "",
   luku = "",
   operaattorit = ["+", "-", "*", "/", "%"],
   tyhjätty = "Klikkaile nappuloita!";
-//Näyttö-funktio (tässä näkyy lisätyt luvut / operaattorit / tulos), tulos muuttuja
+//lasku-funktio (tässä lasketaan lisätyt luvut eval funktion avulla)
 function kalkuloi() {
   tulos = eval(tulos);
   console.log("tuloste 'jono' tällä hetkellä: " + tulos);
