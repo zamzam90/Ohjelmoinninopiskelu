@@ -3,7 +3,8 @@ console.log("Erittäin erittäin simppeli laskin..\nMade by: Sami Siltanen");
 //alustetaan muuttujia:
 var tulos = "",
   luku = "",
-  operaattorit = ["+", "-", "*", "/", "%"];
+  operaattorit = ["+", "-", "*", "/", "%"],
+  tyhjätty = "Klikkaile nappuloita!";
 //Näyttö-funktio (tässä näkyy lisätyt luvut / operaattorit / tulos), tulos muuttuja
 function kalkuloi() {
   tulos = eval(tulos);
@@ -27,6 +28,5 @@ function poista() {
 function alusta() {
   console.log("Näyttö tyhjennetty.."); //for debugging..
   tulos = "";
-  tyhjätty = "Klikkaile nappuloita!";
   document.getElementById("näyttö").innerHTML = tyhjätty;
 }
