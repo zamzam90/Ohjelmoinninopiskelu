@@ -1,0 +1,120 @@
+/* asetetaan sivunpituus 100% */
+html,
+body {
+  min-height: 100vh;
+}
+/* käytetään flexboxia(saadaan footer alas ilman turhia br */
+body {
+  /* piilotetaan scrollbar(niin että se kuitenkin toimii) */
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  /* scrollbar piilossa mutta toiminnassa */
+  background-color: #404040;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  margin: 2px;
+  font: 16px Sans-Serif;
+}
+/* scrollbar piilotus */
+body::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/* Headerin muotoilut
+ei kasva eikä kutistu */
+header {
+  background-color: #595959;
+  font-size: x-large;
+  width: 65%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px 5px 0 0;
+  border-top: thin solid black;
+  border-left: thin solid black;
+  border-right: thin solid black;
+  flex: 0 0 auto;
+}
+header > h1 {
+  text-align: center;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  color: white;
+  font-family: "Dancing Script", cursive;
+}
+/* Sisällön muotoilu
+kasvaa footeriin asti automaattisesti */
+#content {
+  background-color: black;
+  color: crimson;
+  font-family: "New Tegomin", serif;
+  text-align: center;
+  padding: 10px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0 0 5px 5px;
+  border-left: thin solid black;
+  border-right: thin solid black;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Itse laskimen muotoilua... */
+#laskin {
+  /*
+  width: 400px;
+  height: 7000px;*/
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+#laskin td {
+  width: 100px;
+  height: 100px;
+  background-color: #fca429;
+  border: 2px solid black;
+  text-align: center;
+}
+#laskin-otsikko td {
+  color: black;
+  height: 55px;
+}
+button {
+  width: 65px;
+  height: 65px;
+  font-size: large;
+  background-color: #ffffff;
+  border: 2px solid #d1d1d1;
+}
+#näyttö {
+  color: black;
+  background-color: #ffffff !important;
+}
+#plus,
+#equals {
+  height: 130px !important;
+}
+#zero {
+  width: 130px !important;
+}
+/* Footerin muotoilu
+pakotetaan footer alas(shrink 0) */
+footer {
+  flex-shrink: 0;
+}
+footer > p {
+  color: black;
+  text-shadow: 0 0 7px white, 0 0 7px red;
+  text-align: center;
+  font-family: monospace;
+  padding: 10px 0 10px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
