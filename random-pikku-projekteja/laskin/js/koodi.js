@@ -12,7 +12,7 @@ var tulos = "",
 function lisää(luku) {
   tulos += luku;
   //console.log("Luku/Operaattori " + luku + " lisätty laskuun."); //for debugging..
-  console.log(tulos);
+  //console.log(tulos);
   document.getElementById("näyttö").innerHTML = tulos;
 }
 //lasku-funktio (tässä lasketaan lisätyt luvut eval funktion avulla)
