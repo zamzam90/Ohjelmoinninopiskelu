@@ -1,6 +1,6 @@
 //Das Laskin..
 /* 
-TODO: laskin toimii numpädistä, värit, lisää poista edellinen funktio....
+TODO: laskin toimii numpädistä, värit, lisää:poista edellinen numero&operaattori-funktio....
 */
 console.log("Erittäin erittäin simppeli laskin..\nMade by: Sami Siltanen");
 //alustetaan muuttujia:
@@ -21,12 +21,11 @@ function kalkuloi() {
   //console.log("tulos: " + tulos);
   document.getElementById("näyttö").innerHTML = tulos;
 }
-/* ToDo..
-//Poisto-funktio (poistaa viimeksi lisätyn luvun & operaattorin)
+/* !! ToDo !!
+//Poisto-funktio (poistaa viimeksi lisätyn luvun & operaattorin) */
 function poista() {
   console.log("Hello World");
 }
-*/
 //Alustus-funktio (tyhjentää "näytön")
 function alusta() {
   //console.log("Näyttö tyhjennetty."); //for debugging..

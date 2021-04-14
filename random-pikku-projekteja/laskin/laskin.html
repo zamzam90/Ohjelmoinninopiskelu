@@ -27,7 +27,7 @@
             <td id="näyttö" colspan="4">Klikkaile nappuloita!</td>
           </tr>
           <tr>
-            <td>
+            <td id="reset-td" class="operator">
               <button
                 type="button"
                 value="ac"
@@ -38,7 +38,18 @@
                 AC
               </button>
             </td>
-            <td>
+            <td id="delete-td" class="operator">
+              <button
+                type="button"
+                value="del"
+                id="delete"
+                class="operator"
+                onclick="return poista();"
+              >
+                C
+              </button>
+            </td>
+            <td class="operator">
               <button
                 type="button"
                 value="/"
@@ -49,7 +60,7 @@
                 /
               </button>
             </td>
-            <td>
+            <td class="operator">
               <button
                 type="button"
                 value="*"
@@ -60,7 +71,7 @@
                 *
               </button>
             </td>
-            <td>
+            <td class="operator">
               <button
                 type="button"
                 value="-"
@@ -106,7 +117,7 @@
                 9
               </button>
             </td>
-            <td rowspan="2">
+            <td rowspan="2" class="operator">
               <button
                 type="button"
                 value="+"
@@ -187,7 +198,7 @@
                 3
               </button>
             </td>
-            <td rowspan="2">
+            <td rowspan="2" class="operator">
               <button
                 type="button"
                 value="="
@@ -211,7 +222,7 @@
                 0
               </button>
             </td>
-            <td>
+            <td class="operator">
               <button
                 type="button"
                 value="."

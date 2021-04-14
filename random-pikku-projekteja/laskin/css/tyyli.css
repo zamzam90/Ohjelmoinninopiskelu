@@ -7,10 +7,10 @@ body {
 body {
   /* piilotetaan scrollbar(niin että se kuitenkin toimii) */
   overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; /* Firefox, ei toimi?! */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   /* scrollbar piilossa mutta toiminnassa */
-  background-color: #404040;
+  background-color: black;
   display: flex;
   flex-direction: column;
   -ms-flex-direction: column;
@@ -19,7 +19,7 @@ body {
 }
 /* scrollbar piilotus */
 body::-webkit-scrollbar {
-  /* WebKit */
+  /* WebKit, Chrome..*/
   width: 0;
   height: 0;
 }
@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
 /* Headerin muotoilut
 ei kasva eikä kutistu */
 header {
-  background-color: #595959;
+  background-color: #34495e;
   font-size: x-large;
   width: 65%;
   margin-top: 2%;
@@ -44,14 +44,14 @@ header {
 header > h1 {
   text-align: center;
   text-shadow: 2px 2px rgb(0, 0, 0);
-  color: white;
+  color: #05c46b;
   font-family: "Dancing Script", cursive;
 }
 /* Sisällön muotoilu
 kasvaa footeriin asti automaattisesti */
 #content {
-  background-color: black;
-  color: crimson;
+  background-color: #2c3e50;
+  color: darkgray;
   font-family: "New Tegomin", serif;
   text-align: center;
   padding: 10px;
@@ -69,30 +69,42 @@ kasvaa footeriin asti automaattisesti */
 }
 /* Itse laskimen muotoilua... */
 #laskin {
-  border: 2px solid black;
   border-collapse: collapse;
 }
 #laskin td {
   width: 100px;
   height: 100px;
-  background-color: #fca429;
-  border: 2px solid black;
+  background-color: #1e272e;
+  border: 3px solid black;
   text-align: center;
 }
 #laskin-otsikko td {
-  color: black;
+  color: #dfe6e9;
   height: 55px;
 }
 button {
   width: 65px;
   height: 65px;
+  color: white;
   font-size: large;
-  background-color: #ffffff;
-  border: 2px solid #d1d1d1;
+  font-weight: bold;
+  border: none;
+}
+/* poistetaan napilta ulkoreunat focus tilassa */
+button:focus {
+  outline: none;
 }
 #näyttö {
-  color: black;
-  background-color: #ffffff !important;
+  color: #dfe6e9;
+  font-size: x-large;
+  font-weight: 500;
+  background-color: #2d3436 !important;
+}
+.operator {
+  background-color: #fdcb6e !important;
+}
+.number {
+  background-color: #1e272e;
 }
 #plus,
 #equals {
@@ -101,14 +113,15 @@ button {
 #zero {
   width: 130px !important;
 }
+/* ..laskimen muotoiluja */
 /* Footerin muotoilu
 pakotetaan footer alas(shrink 0) */
 footer {
-  flex-shrink: 0;
+  flex: 0 1 auto;
 }
 footer > p {
   color: black;
-  text-shadow: 0 0 7px white, 0 0 7px red;
+  text-shadow: 0 0 8px white, 0 0 8px #1abc9c;
   text-align: center;
   font-family: monospace;
   padding: 10px 0 10px 0;
