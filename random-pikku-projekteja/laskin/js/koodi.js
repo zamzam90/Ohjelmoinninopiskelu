@@ -1,6 +1,6 @@
 //Das Laskin..
 /* 
-TODO: laskin toimii numpädistä, värit, lisää:poista edellinen numero&operaattori-funktio....
+TODO: laskin toimii numpädistä, muotoilu&värit..
 */
 console.log("Erittäin erittäin simppeli laskin..\nMade by: Sami Siltanen");
 //alustetaan muuttujia:
@@ -22,21 +22,19 @@ function kalkuloi() {
   //console.log("tulos: " + tulos);//for debugging..
   document.getElementById("näyttö").innerHTML = tulos;
 }
-/* !! ToDo !!
 //Poisto-funktio (poistaa viimeksi lisätyn luvun & operaattorin) */
 function poista() {
   var str, patt, result;
   str = tulos;
-  patt = /[-+/*]\b/; /* https://stackoverflow.com/questions/4009817/include-the-minus-sign-into-this-regular-expression-how ensin ei  - toiminut..*/
-  result = patt.exec(
-    str
-  ); /* https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript result.index, saadan regextuloksen indexi*/
-  console.log(result.index); //for debugging..
-  str = str.substr(
-    0,
-    result.index
-  ); /* https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript */
-  console.log(str); //for debugging..
+  patt = /[-+/*\b]/g; /* https://stackoverflow.com/questions/4009817/include-the-minus-sign-into-this-regular-expression-how ensin ei  - toiminut..*/
+  /* https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript saadaan viimeisimmän matchin indexi*/
+  while ((match = patt.exec(str)) != null) {
+    result = match.index;
+  }
+  //console.log(result);//for debugging
+  /* https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript */
+  str = str.substr(0, result);
+  //console.log(str); //for debugging..
   tulos = str;
   document.getElementById("näyttö").innerHTML = tulos;
 }
