@@ -1,14 +1,15 @@
 //Das Laskin..
 /* 
-TODO: estää ","" käyttö useammin kuin kerran(nyt ei saa peräkkäin mutta esim 6,66, onnistuu..), % operaattori, laskin toimii numpädistä, muotoilu&värit..
+TODO: estää ","" käyttö useammin kuin kerran(nyt ei saa peräkkäin mutta esim 6,66, onnistuu..), estää operaattorin syöttäminen _ensimmäisenä_, % operaattori, laskin toimii numpädistä, muotoilu&värit..
 */
 console.log("Erittäin erittäin simppeli laskin..\nMade by: Sami Siltanen");
 //alustetaan muuttujia:
 var tulos = "",
   luku = "",
   tyhjätty = "Klikkaile nappuloita!";
-//Lisäys-funktio (lisää luvun / operaattorin) lisätään luku tulosmuuttujaan
+//Lisäys-funktio, lisää luvun/operaattorin tulosmuuttujaan
 function lisää(luku) {
+  /* estetään peräkkäisten pilkkujen lisääminen */
   if (luku == "." && tulos[tulos.length - 1] == ".") {
     return false;
   } else {
@@ -18,7 +19,7 @@ function lisää(luku) {
     document.getElementById("näyttö").innerHTML = tulos;
   }
 }
-//Lasku-funktio (tässä lasketaan lisätyt luvut eval funktion avulla)
+//Lasku-funktio, lasketaan tulos-muuttujaan lisätyt luvut eval funktion avulla)
 function kalkuloi() {
   /* Estetään undefined jos painetaan ensimmäisenä = nappia */
   if (tulos == "") {
@@ -35,6 +36,10 @@ function kalkuloi() {
 function poista() {
   var patt, lastOperatorIndex;
   patt = /[-+/*]/g; /* https://stackoverflow.com/questions/4009817/include-the-minus-sign-into-this-regular-expression-how ensin ei  - toiminut..*/
+  /* jos tuloste on tyhjä, ei tyhjennetä näyttöä */
+  if (tulos == "") {
+    return false;
+  }
   /* https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript saadaan viimeisimmän matchin indexi*/
   while ((match = patt.exec(tulos)) != null) {
     lastOperatorIndex = match.index;
