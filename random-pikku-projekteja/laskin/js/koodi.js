@@ -1,6 +1,6 @@
 //Das Laskin..
 /* 
-TODO: laskin toimii numpädistä, muotoilu&värit..
+TODO: % operaattori, laskin toimii numpädistä, muotoilu&värit..
 */
 console.log("Erittäin erittäin simppeli laskin..\nMade by: Sami Siltanen");
 //alustetaan muuttujia:
@@ -24,18 +24,16 @@ function kalkuloi() {
 }
 //Poisto-funktio (poistaa viimeksi lisätyn luvun & operaattorin) */
 function poista() {
-  var str, patt, result;
-  str = tulos;
+  var patt, lastOperatorIndex;
   patt = /[-+/*\b]/g; /* https://stackoverflow.com/questions/4009817/include-the-minus-sign-into-this-regular-expression-how ensin ei  - toiminut..*/
   /* https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript saadaan viimeisimmän matchin indexi*/
-  while ((match = patt.exec(str)) != null) {
-    result = match.index;
+  while ((match = patt.exec(tulos)) != null) {
+    lastOperatorIndex = match.index;
   }
-  //console.log(result);//for debugging
+  //console.log(lastOperatorIndex);//for debugging
   /* https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript */
-  str = str.substr(0, result);
-  //console.log(str); //for debugging..
-  tulos = str;
+  tulos = tulos.substr(0, lastOperatorIndex);
+  //console.log(tulos); //for debugging..
   document.getElementById("näyttö").innerHTML = tulos;
 }
 //Alustus-funktio (tyhjentää "näytön")
