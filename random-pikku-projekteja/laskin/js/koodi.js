@@ -1,12 +1,11 @@
 //Das Laskin..
 /* 
-TODO: % operaattori, laskin toimii numpädistä, muotoilu&värit..
+TODO: , estää , käyttö useammin kuin kerran, % operaattori, laskin toimii numpädistä, muotoilu&värit..
 */
 console.log("Erittäin erittäin simppeli laskin..\nMade by: Sami Siltanen");
 //alustetaan muuttujia:
 var tulos = "",
   luku = "",
-  operaattorit = ["+", "-", "*", "/"] /* poista nappille operaattorit */,
   tyhjätty = "Klikkaile nappuloita!";
 //Lisäys-funktio (lisää luvun / operaattorin) lisätään luku tulosmuuttujaan
 function lisää(luku) {
@@ -25,7 +24,7 @@ function kalkuloi() {
 //Poisto-funktio (poistaa viimeksi lisätyn luvun & operaattorin) */
 function poista() {
   var patt, lastOperatorIndex;
-  patt = /[-+/*\b]/g; /* https://stackoverflow.com/questions/4009817/include-the-minus-sign-into-this-regular-expression-how ensin ei  - toiminut..*/
+  patt = /[-+/*]/g; /* https://stackoverflow.com/questions/4009817/include-the-minus-sign-into-this-regular-expression-how ensin ei  - toiminut..*/
   /* https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript saadaan viimeisimmän matchin indexi*/
   while ((match = patt.exec(tulos)) != null) {
     lastOperatorIndex = match.index;
