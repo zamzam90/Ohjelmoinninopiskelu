@@ -6,7 +6,7 @@ console.log("Erittäin erittäin simppeli laskin..\nMade by: Sami Siltanen");
 //alustetaan muuttujia:
 var tulos = "",
   luku = "",
-  operaattorit = ["+", "-", "*", "/", "%"] /* poista nappille operaattorit */,
+  operaattorit = ["+", "-", "*", "/"] /* poista nappille operaattorit */,
   tyhjätty = "Klikkaile nappuloita!";
 //Lisäys-funktio (lisää luvun / operaattorin) lisätään luku tulosmuuttujaan
 function lisää(luku) {
@@ -15,16 +15,30 @@ function lisää(luku) {
   //console.log(tulos);
   document.getElementById("näyttö").innerHTML = tulos;
 }
-//lasku-funktio (tässä lasketaan lisätyt luvut eval funktion avulla)
+//Lasku-funktio (tässä lasketaan lisätyt luvut eval funktion avulla)
 function kalkuloi() {
-  tulos = eval(tulos);
-  //console.log("tulos: " + tulos);
+  tulos = eval(tulos); /*lasketaan eval funktiolla*/
+  tulos = tulos.toString(); /*muutetaan tulos takaisin stringiksi*/
+  //console.log("tulos: " + tulos);//for debugging..
   document.getElementById("näyttö").innerHTML = tulos;
 }
 /* !! ToDo !!
 //Poisto-funktio (poistaa viimeksi lisätyn luvun & operaattorin) */
 function poista() {
-  console.log("Hello World");
+  var str, patt, result;
+  str = tulos;
+  patt = /[-+/*]\b/; /* https://stackoverflow.com/questions/4009817/include-the-minus-sign-into-this-regular-expression-how ensin ei  - toiminut..*/
+  result = patt.exec(
+    str
+  ); /* https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript result.index, saadan regextuloksen indexi*/
+  console.log(result.index); //for debugging..
+  str = str.substr(
+    0,
+    result.index
+  ); /* https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript */
+  console.log(str); //for debugging..
+  tulos = str;
+  document.getElementById("näyttö").innerHTML = tulos;
 }
 //Alustus-funktio (tyhjentää "näytön")
 function alusta() {
