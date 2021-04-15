@@ -1,6 +1,6 @@
 //Das Laskin..
 /* 
-TODO: , estää , käyttö useammin kuin kerran, % operaattori, laskin toimii numpädistä, muotoilu&värit..
+TODO: estää ","" käyttö useammin kuin kerran(nyt ei saa peräkkäin mutta esim 6,66, onnistuu..), % operaattori, laskin toimii numpädistä, muotoilu&värit..
 */
 console.log("Erittäin erittäin simppeli laskin..\nMade by: Sami Siltanen");
 //alustetaan muuttujia:
@@ -9,10 +9,14 @@ var tulos = "",
   tyhjätty = "Klikkaile nappuloita!";
 //Lisäys-funktio (lisää luvun / operaattorin) lisätään luku tulosmuuttujaan
 function lisää(luku) {
-  tulos += luku;
-  //console.log("Luku/Operaattori " + luku + " lisätty laskuun."); //for debugging..
-  //console.log(tulos);
-  document.getElementById("näyttö").innerHTML = tulos;
+  if (luku == "." && tulos[tulos.length - 1] == ".") {
+    return false;
+  } else {
+    tulos += luku;
+    //console.log("Luku/Operaattori " + luku + " lisätty laskuun."); //for debugging..
+    //console.log(tulos);
+    document.getElementById("näyttö").innerHTML = tulos;
+  }
 }
 //Lasku-funktio (tässä lasketaan lisätyt luvut eval funktion avulla)
 function kalkuloi() {

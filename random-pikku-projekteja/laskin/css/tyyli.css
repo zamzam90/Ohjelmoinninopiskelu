@@ -69,6 +69,9 @@ kasvaa footeriin asti automaattisesti */
 }
 /* Itse laskimen muotoilua... */
 #laskin {
+  /*
+  border: 20px solid #242424;
+  border-radius: 10px;*/
   border-collapse: collapse;
 }
 #laskin td {
