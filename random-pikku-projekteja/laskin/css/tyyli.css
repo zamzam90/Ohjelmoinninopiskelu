@@ -102,6 +102,12 @@ button:focus {
   font-size: x-large;
   font-weight: 500;
   background-color: #2d3436 !important;
+  /*****ettei näyttö veny*****/
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  /***************************/
 }
 .operator {
   background-color: #fdcb6e !important;
