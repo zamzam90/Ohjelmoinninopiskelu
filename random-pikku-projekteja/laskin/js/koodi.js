@@ -20,10 +20,16 @@ function lisää(luku) {
 }
 //Lasku-funktio (tässä lasketaan lisätyt luvut eval funktion avulla)
 function kalkuloi() {
-  tulos = eval(tulos); /*lasketaan eval funktiolla*/
-  tulos = tulos.toString(); /*muutetaan tulos takaisin stringiksi*/
-  //console.log("tulos: " + tulos);//for debugging..
-  document.getElementById("näyttö").innerHTML = tulos;
+  /* Estetään undefined jos painetaan ensimmäisenä = nappia */
+  if (tulos == "") {
+    //console.log("hello");//for debugging..
+    return false;
+  } else {
+    tulos = eval(tulos); /*lasketaan eval funktiolla*/
+    tulos = tulos.toString(); /*muutetaan tulos takaisin stringiksi*/
+    //console.log("tulos: " + tulos); //for debugging..
+    document.getElementById("näyttö").innerHTML = tulos;
+  }
 }
 //Poisto-funktio (poistaa viimeksi lisätyn luvun & operaattorin) */
 function poista() {
