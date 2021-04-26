@@ -38,16 +38,31 @@ function poista() {
   patt = /[-+/*]/g; /* https://stackoverflow.com/questions/4009817/include-the-minus-sign-into-this-regular-expression-how ensin ei  - toiminut..*/
   /* jos tuloste on tyhjä, ei tyhjennetä näyttöä */
   if (tulos == "") {
+    //console.log("hello0");
     return false;
   }
   /* https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript saadaan viimeisimmän matchin indexi*/
   while ((match = patt.exec(tulos)) != null) {
+    //console.log("hello1");
     lastOperatorIndex = match.index;
   }
   //console.log(lastOperatorIndex);//for debugging
   /* https://www.tutorialspoint.com/how-to-remove-text-from-a-string-in-javascript */
   tulos = tulos.substr(0, lastOperatorIndex);
+  //console.log("hello2");
+
+  //jos ei operaattoria poistetaan viimeinen luku
+  if (lastOperatorIndex == undefined) {
+    //console.log("hello undefined");
+    tulos = tulos.substring(0, tulos.length - 1);
+    //console.log(tulos + " " + tulos.length);
+  }
+  if (tulos == "" && tulos.length == 0) {
+    //console.log("hello3");
+    return alusta();
+  }
   //console.log(tulos); //for debugging..
+  //console.log("hello4");
   document.getElementById("näyttö").innerHTML = tulos;
 }
 //Alustus-funktio (tyhjentää "näytön")
