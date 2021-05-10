@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="readFromLS.js"></script>
+    <script src="readFromLS.js" defer></script>
     <!-- eri js tiedosto? -->
     <title>Document</title>
   </head>
@@ -33,7 +33,7 @@
           tiedot)?
         </p>
         <div>
-          <button id="listaaBtn" onclick="return listLSitems();">
+          <button id="listaaBtn" onclick="return listaa();">
             Näytä tiedot
           </button>
           <button id="tyhjääLSkokonaan" onclick="return tyhjääLocalStorage();">
