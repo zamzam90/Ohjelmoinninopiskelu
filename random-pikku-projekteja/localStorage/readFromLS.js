@@ -20,9 +20,9 @@ var listaaBtn = document.getElementById("listaaBtn");
   1. hae avain/avaimet localstoragesta -> muuttujaan
   1.1 arvo(t?) -> muuttujaan (JSON.parse)
   1.2 käy koko arvo objekti läpi ja puske tiedot johonkin muuttujiin
-  2. kirjoita for loopilla:
-      -avain:
-      -arvot listana?
+  2. kirjoita for loopilla htmltablee?:
+      -avain: table header colspan 2
+      -arvot table cell etc?
       Henkilötiedot 0:
       Etunimi: Matti
       Sukunimi: Meikäläinen
@@ -43,7 +43,28 @@ function printObject(o) {
 }
 /* helvetisti tekemistä vielä */
 
-/* Funktio joka näyttää localStoragen tiedot */
+/* Funktio joka tulostaa tiedot htmlään */
+function listaa() {
+  /* alustetaan muuttujia ja haetaan niihin tietoa */
+  var printKey,
+    printValue,
+    printHTML = "";
+
+  console.log("tulostetaan...");
+  for (x = 0; x < localStorage.length; x++) {
+    // hae avain localStoragesta
+    printKey = localStorage.key(x);
+    console.log("printKey");
+    // hae avaimella arvo localStoragesta
+    printValue = JSON.parse(localStorage.getItem("printKey"));
+    console.log(printValue);
+    // lisätään avain ja sen arvo tulosteeseen
+    printHTML += printKey + " " + printValue + "<br>";
+  }
+  document.getElementById("infoArea").innerHTML = printHTML;
+}
+
+/* Funktio joka näyttää localStoragen tiedot konsolissa*/
 function listLSitems() {
   console.log(localStorage);
 }
