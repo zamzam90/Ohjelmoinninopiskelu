@@ -2,6 +2,7 @@ console.log("Hello stranger..");
 
 /* 
 TODO:
+  -lisätä kenttien tarkistus, onko syötetty mitään jne..
   -??
   -testailla
   -fixailla/hifistellä..
@@ -20,7 +21,7 @@ function formTiedotOlioon() {
   //for loopilla lisätään formin nimi ja arvo olioon.. -2 koska ei haluta nappeja olioon
   for (x = 0; x < lsForm.length - 2; x++) {
     console.log(lsForm[x].name + " " + lsForm[x].value); //tulostetaan "nimi" ja sen arvo
-    /* lisää tiedot taulukosta olioon */
+    /* lisää tiedot taulukosta olioon: */
     henkilöTiedot[lsForm[x].name] = lsForm[x].value;
   }
 }
