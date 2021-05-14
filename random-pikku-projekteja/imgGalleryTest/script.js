@@ -46,7 +46,9 @@ function slideShow() {
 /* Modal stuff..
 https://www.w3schools.com/howto/howto_css_modal_images.asp
 */
-// haetaan gridin kuvat htmlstä
+
+/* haetaan gridin kuvat htmlstä
+https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll */
 var imageGrid = document.querySelector(".image-grid");
 var gridImages = imageGrid.querySelectorAll("div.grid-image > img");
 // lisätään for loopilla jokaiseen kuvaan eventlistener
