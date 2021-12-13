@@ -14,13 +14,18 @@
         Paina nappia vaihtaaksesi satunnainen taustaväri tai valitse väri itse.
       </h2>
     </header>
-    <div class="container">
+    <div class="container" id="tausta">
       <div>
-        <button id="satunnainenVari">Satunnainen väri</button>
+        <button id="satunnainenVari" onclick="return randomColor();">
+          Satunnainen väri
+        </button>
       </div>
       <div>
         <label for="manuaalinenVari">Valitse väri</label>
         <input type="color" name="" id="manuaalinenVari" />
+      </div>
+      <div>
+        <button id="reset" onclick="return bgColorReset();">Nollaa</button>
       </div>
     </div>
     <footer class="text-center">
