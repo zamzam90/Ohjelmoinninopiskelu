@@ -2,6 +2,7 @@
 TODO:
 -vaihtaa containerin taustaväriä:
     -colorpikkeristä väri
+    -resetti resetoi molemmat, random&manual...
 -mobiili kikkailu?
 */
 
